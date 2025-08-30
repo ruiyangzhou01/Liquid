@@ -44,4 +44,4 @@
 
 ### 修改项目的源代码
 
-从[Releases](https://github.com/Fentaniao/Liquid/releases)页面下载`Source code (zip)`，然后修改`scr`目录下的CSS文件。
+从[Releases](https://github.com/ruiyangzhou01/Liquid/releases)页面下载`Source code (zip)`，然后修改`scr`目录下的CSS文件。
