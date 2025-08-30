@@ -40,9 +40,9 @@ Open this demo with Typora in your local PC after you install Liquid Theme to ch
 
 ### Hyperlink
 
-[Homepage](https://github.com/Fentaniao/Liquid)
+[Homepage](https://github.com/ruiyangzhou01/Liquid)
 
-[Download](https://github.com/Fentaniao/Liquid/releases)
+[Download](https://github.com/ruiyangzhou01/Liquid/releases)
 
 ### Quote
 
