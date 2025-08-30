@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Comment to an open issue
-        uses: Fentaniao/issues-action@0.01
+        uses: ruiyangzhou01/issues-action@0.01
         with:
           actions: 'create-comment'
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -20,4 +20,4 @@ jobs:
           actions: 'add-assignees'
           token: ${{ secrets.GITHUB_TOKEN }}
           issue-number: ${{ github.event.issue.number }}
-          assignees: 'Fentaniao'
+          assignees: 'ruiyangzhou01'
