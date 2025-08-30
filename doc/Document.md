@@ -28,8 +28,6 @@
    └─liquid # part of css file
 ```
 
-
-
 ## Usage
 
 ### Add Custom CSS (Recommended)
@@ -44,4 +42,4 @@ First install Liquid Theme to your PC, then modify the `xxxxx.css` file of Liqui
 
 ### Modify Source Code of Project
 
-Download the `Source code (zip)` from the [Releases](https://github.com/Fentaniao/Liquid/releases) in [Liquid repository](https://github.com/Fentaniao/Liquid/), and then modify the CSS file under `scr` folder.
+Download the `Source code (zip)` from the [Releases](https://github.com/ruiyangzhou01/Liquid/releases) in [Liquid repository](https://github.com/ruiyangzhou01/Liquid/), and then modify the CSS file under `scr` folder.
