@@ -26,27 +26,27 @@ typora-copy-images-to: ../../media/theme/Liquid
     <img alt="issues closed" src="https://img.shields.io/github/issues-closed/ruiyangzhou01/liquid"/>
 </p>
 
-[English Readme](https://github.com/ruiyangzhou01/Liquid/blob/main/README.md) • [中文自述文件](https://github.com/ruiyangzhou01/Liquid/blob/main/README_zh.md)
+[English](https://github.com/ruiyangzhou01/Liquid/blob/main/README.md) • [中文](https://github.com/ruiyangzhou01/Liquid/blob/main/README_zh.md) • [Deutsch](https://github.com/ruiyangzhou01/Liquid/blob/main/README_de.md) • [Español](https://github.com/ruiyangzhou01/Liquid/blob/main/README_es.md) • [Français](https://github.com/ruiyangzhou01/Liquid/blob/main/README_fr.md)
 
-为Typora精心设计的具有出色视觉效果的主题，灵感来源于[Microsoft Fluent Design](https://www.microsoft.com/design/fluent/#/) 和[Purple Theme](https://github.com/hliu202/typora-purple-theme)。 这个主题能够在Windows 11平台上为Typora提供出色的视觉体验。
+Liquid 是为 Typora 设计的主题，灵感来源于 [Microsoft Fluent Design](https://www.microsoft.com/design/fluent/#/) 和 [Purple Theme](https://github.com/hliu202/typora-purple-theme)。它旨在为 Windows 11 提供现代化的视觉体验，包含渐变、云母材质和圆角矩形等元素。
 
 ## 特性
 
-- 颜色交互
+- 彩色指示
 - 渐变
 - 云母材质
-- 圆角
+- 圆角矩形
 - 多模式支持
 
 ## 支持
 
-- 系统：Windows 11 和Windows 10。
-- 模式：Light mode，Dark mode，Ink mode和Ink Dark Mode。
+- 系统：Windows 11 和 Windows 10。
+- 模式：Light Mode、Dark Mode、Ink Mode 和 Ink Dark Mode。
 - 语言：英语和中文。
 
 ## Screenshots
 
-Liquid Theme旨在为Windows 11中的Typora提供出色的视觉效果。我使用了现代UI的元素，如渐变、云母和圆角矩形。这个主题支持中文和英文，并且提供了四个模式——Light mode，Dark mode，Ink mode和Ink Dark Mode。
+Liquid Theme 旨在为 Windows 11 中的 Typora 提供现代化视觉体验。它使用了现代 UI 元素，如渐变、云母材质和圆角矩形。主题支持中文和英文，并提供 Light Mode、Dark Mode、Ink Mode 和 Ink Dark Mode。
 
 ![preview](/media/theme/liquid/preview.png)
 
@@ -68,7 +68,7 @@ Liquid Theme旨在为Windows 11中的Typora提供出色的视觉效果。我使�
 
 ### Ink Mode & Ink Dark Mode
 
-你可能使用像Microsoft Surface这样的二合一电脑来学习和写作，也有可能你只是喜欢手写字体，那么Ink Mode则为你提供了在Typora中使用手写字体来书写和阅读的机会。
+如果你使用像 Microsoft Surface 这样的二合一电脑来学习和写作，或者只是喜欢手写字体，那么 Ink Mode 可以在 Typora 中提供手写风格的阅读和书写体验。
 
 ![ink-preview1](/media/theme/liquid/ink-preview1.png)
 
@@ -78,20 +78,20 @@ Liquid Theme旨在为Windows 11中的Typora提供出色的视觉效果。我使�
 
 ## 安装
 
-1. 从位于[Liquid 存储库](https://github.com/ruiyangzhou01/Liquid/)中的[Releases](https://github.com/ruiyangzhou01/Liquid/releases)页面中下载**Liquid.zip** 。
-2. 在Typora设置页面中，点击*偏好设置*，然后点击*界面*，最后点击*打开主题文件夹*。
-3. 解压**Liquid.zip**到该文件夹中。
+1. 从 [Liquid 存储库](https://github.com/ruiyangzhou01/Liquid/)的 [Releases](https://github.com/ruiyangzhou01/Liquid/releases) 页面下载 **Liquid.zip**。
+2. 在 Typora 设置中，点击 **偏好设置**，选择 **界面**，然后点击 **打开主题文件夹**。
+3. 将 **Liquid.zip** 解压到该文件夹中。
 4. 重启Typora。
-5. 在Typora的*主题* 选项中选择Liquid主题。
-6. 打开`Demo.md`查看渲染效果。
+5. 在 Typora 的 **主题** 菜单中选择 Liquid 主题。
+6. 打开 `Demo.md` 预览本地渲染效果。
 
 ### 注意
 
-为了在Ink Mode下渲染中文字体，你仍需要将"liquid/FZSJ-SGLDXMHJW.TTF"安装到你的PC上。
+为了在 Ink Mode 下渲染中文字符，请在你的 PC 上安装 `liquid/FZSJ-SGLDXMHJW.TTF` 字体。
 
 ### 二次开发指南
 
-转到[开发文档](https://github.com/ruiyangzhou01/Liquid/blob/main/doc/Document_zh.md)来了解如何进行二次开发。
+请参阅[开发文档](https://github.com/ruiyangzhou01/Liquid/blob/main/doc/Document_zh.md)了解如何进行二次开发。
 
 ## 许可证
 
