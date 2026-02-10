@@ -26,29 +26,28 @@ typora-copy-images-to: ../../media/theme/Liquid
     <img alt="issues closed" src="https://img.shields.io/github/issues-closed/ruiyangzhou01/liquid"/>
 </p>
 
-[English](https://github.com/ruiyangzhou01/Liquid/blob/main/README.md) • [中文](https://github.com/ruiyangzhou01/Liquid/blob/main/README_zh.md) • [Deutsch](https://github.com/ruiyangzhou01/Liquid/blob/main/README_de.md) • [Español](https://github.com/ruiyangzhou01/Liquid/blob/main/README_es.md) • [Français](https://github.com/ruiyangzhou01/Liquid/blob/main/README_fr.md)
+[English](https://github.com/ruiyangzhou01/Liquid/blob/main/README.md) • [中文](https://github.com/ruiyangzhou01/Liquid/blob/main/README_zh.md) • [Deutsch](https://github.com/ruiyangzhou01/Liquid/blob/main/README_de.md) • [Español](https://github.com/ruiyangzhou01/Liquid/blob/main/README_es.md) • [Français](https://github.com/ruiyangzhou01/Liquid/blob/main/README_fr.md) • [日本語](https://github.com/ruiyangzhou01/Liquid/blob/main/README_ja.md)
 
-Liquid est un thème Typora inspiré de [Microsoft Fluent Design](https://www.microsoft.com/design/fluent/#/) et du [Purple Theme](https://github.com/hliu202/typora-purple-theme). Il vise à offrir un style moderne de Windows 11 avec des dégradés, le matériau mica et des rectangles arrondis.
+Liquid est un thème Typora inspiré par [Microsoft Fluent Design](https://www.microsoft.com/design/fluent/#/) et le [Purple Theme](https://github.com/hliu202/typora-purple-theme). Il offre une expérience de lecture et d’écriture de style Windows 11 grâce aux dégradés, aux surfaces de type mica, aux rectangles arrondis et aux polices intégrées. Le thème propose quatre variantes basées sur du CSS modulaire.
 
 ## Fonctionnalités
 
-- Indicateurs colorés
-- Dégradés
-- Matériau mica
-- Rectangles arrondis
-- Plusieurs modes
+- Style Fluent Design avec dégradés, mica, rectangles arrondis et indicateurs colorés
+- Quatre variantes : Light, Dark, Ink et Ink Dark
+- Styles CodeMirror personnalisés pour les blocs de code
+- Polices serif, manuscrites et monospace intégrées
 
 ## Compatibilité
 
-- Système : Windows 11 et Windows 10.
-- Modes : Light Mode, Dark Mode, Ink Mode et Ink Dark Mode.
-- Langues : anglais et chinois.
+- Windows 10 et Windows 11
+- Application de bureau Typora
+- Couverture linguistique : anglais et chinois (Source Han Serif CN). Les modes Ink utilisent également Ink Free et FZSJ-SGLDXMHJW pour l’écriture manuscrite.
 
-## Captures d'écran
+## Captures d’écran
 
-Liquid Theme vise à offrir une expérience visuelle moderne de Windows 11 dans Typora. Il utilise des éléments d'interface tels que des dégradés, le matériau mica et des rectangles arrondis. Le thème prend en charge l'anglais et le chinois et propose Light Mode, Dark Mode, Ink Mode et Ink Dark Mode.
+Liquid Theme vise à offrir une expérience visuelle moderne de Windows 11 dans Typora. Il utilise des éléments d’interface comme les dégradés, la matière mica et les rectangles arrondis. Le thème prend en charge l’anglais et le chinois et propose Light Mode, Dark Mode, Ink Mode et Ink Dark Mode.
 
-![preview](./media/theme/liquid/preview.png)
+![preview](/media/theme/liquid/preview.png)
 
 ### Light Mode
 
@@ -68,7 +67,7 @@ Liquid Theme vise à offrir une expérience visuelle moderne de Windows 11 dans 
 
 ### Ink Mode & Ink Dark Mode
 
-Si vous utilisez un PC 2-en-1 comme Microsoft Surface pour étudier ou écrire, ou si vous préférez les polices manuscrites, Ink Mode offre une expérience de lecture et d'écriture au style manuscrit dans Typora.
+Si vous utilisez un PC 2-en-1 comme Microsoft Surface pour étudier ou écrire, ou si vous préférez simplement les polices manuscrites, Ink Mode offre une expérience de lecture et d’écriture manuscrite dans Typora.
 
 ![ink-preview1](/media/theme/liquid/ink-preview1.png)
 
@@ -78,21 +77,36 @@ Si vous utilisez un PC 2-en-1 comme Microsoft Surface pour étudier ou écrire, 
 
 ## Installation
 
-1. Téléchargez `Liquid.zip` depuis la page [Releases](https://github.com/ruiyangzhou01/Liquid/releases) du [dépôt Liquid](https://github.com/ruiyangzhou01/Liquid/).
-2. Ouvrez les paramètres de Typora. Dans **Preferences**, sélectionnez **Appearance**, puis cliquez sur **Open Theme Folder**.
-3. Décompressez `Liquid.zip` dans le dossier des thèmes.
+1. Téléchargez `liquid.zip` depuis la page [Releases](https://github.com/ruiyangzhou01/Liquid/releases).
+2. Dans Typora, ouvrez **Preferences** → **Appearance** → **Open Theme Folder**.
+3. Décompressez et copiez `liquid.css`, `liquid-dark.css`, `liquid-ink.css`, `liquid-ink-dark.css` ainsi que le dossier de polices `liquid/` dans le dossier du thème.
 4. Redémarrez Typora.
 5. Sélectionnez le thème Liquid dans le menu **Themes**.
-6. Ouvrez `Demo.md` pour prévisualiser le rendu local.
+6. Ouvrez `Demo.md` depuis ce dépôt (ou l’archive du code source) pour prévisualiser le rendu.
 
-### Attention
+### Polices du mode Ink
 
-Installez la police `liquid/FZSJ-SGLDXMHJW.TTF` sur votre PC pour afficher les caractères chinois en Ink Mode.
+Installez `FZSJ-SGLDXMHJW.TTF` depuis `dist/liquid` (ou le dossier `liquid/` du release) pour afficher les caractères chinois en mode Ink. `Inkfree.ttf` fournit la police manuscrite pour le texte latin.
 
-### Guide de développement secondaire
+## Construire depuis la source
 
-Consultez [Document](https://github.com/ruiyangzhou01/Liquid/blob/main/doc/Document.md) pour obtenir des conseils sur la personnalisation du thème Liquid.
+Les scripts de build utilisent des chemins Windows.
 
-## License
+1. Installez Python 3.
+2. Exécutez `cd src/Deploy`.
+3. Exécutez `python CombineCSS.py` pour combiner `src/liquid*.css` dans `dist/*.css`.
+4. (Optionnel) Exécutez `cd ../deploy` et `python CompressZip.py` pour empaqueter `dist` en `liquid.zip`.
+
+## Personnalisation
+
+- Ajoutez du CSS personnalisé dans Typora (recommandé) : <https://support.typora.io/Add-Custom-CSS/>.
+- Modifiez les fichiers compilés dans le dossier du thème (`dist/*.css` dans ce dépôt).
+- Pour des changements plus profonds, modifiez les modules dans `src/liquid/` et reconstruisez. Consultez la documentation ci-dessous.
+
+## Documentation
+
+- [Documentation du thème Liquid](doc/Document_fr.md)
+
+## Licence
 
 [GPL-3.0 License](https://github.com/ruiyangzhou01/Liquid/blob/main/LICENSE) © ruiyangzhou01

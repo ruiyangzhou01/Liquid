@@ -26,23 +26,22 @@ typora-copy-images-to: ../../media/theme/Liquid
     <img alt="issues closed" src="https://img.shields.io/github/issues-closed/ruiyangzhou01/liquid"/>
 </p>
 
-[English](https://github.com/ruiyangzhou01/Liquid/blob/main/README.md) • [中文](https://github.com/ruiyangzhou01/Liquid/blob/main/README_zh.md) • [Deutsch](https://github.com/ruiyangzhou01/Liquid/blob/main/README_de.md) • [Español](https://github.com/ruiyangzhou01/Liquid/blob/main/README_es.md) • [Français](https://github.com/ruiyangzhou01/Liquid/blob/main/README_fr.md)
+[English](https://github.com/ruiyangzhou01/Liquid/blob/main/README.md) • [中文](https://github.com/ruiyangzhou01/Liquid/blob/main/README_zh.md) • [Deutsch](https://github.com/ruiyangzhou01/Liquid/blob/main/README_de.md) • [Español](https://github.com/ruiyangzhou01/Liquid/blob/main/README_es.md) • [Français](https://github.com/ruiyangzhou01/Liquid/blob/main/README_fr.md) • [日本語](https://github.com/ruiyangzhou01/Liquid/blob/main/README_ja.md)
 
-Liquid is a Typora theme inspired by [Microsoft Fluent Design](https://www.microsoft.com/design/fluent/#/) and the [Purple Theme](https://github.com/hliu202/typora-purple-theme). It aims to deliver a modern Windows 11 look with gradients, mica material, and rounded rectangles.
+Liquid is a Typora theme inspired by [Microsoft Fluent Design](https://www.microsoft.com/design/fluent/#/) and the [Purple Theme](https://github.com/hliu202/typora-purple-theme). It delivers a Windows 11-style reading and writing experience with gradients, mica-like surfaces, rounded rectangles, and bundled fonts. The theme ships four variants built from modular CSS.
 
 ## Features
 
-- Colorful indicators
-- Gradients
-- Mica material
-- Rounded rectangles
-- Multiple modes
+- Fluent Design styling with gradients, mica, rounded rectangles, and colorful indicators
+- Four variants: Light, Dark, Ink, and Ink Dark
+- Customized CodeMirror styles for code blocks
+- Bundled serif, handwriting, and monospace fonts
 
-## Support List
+## Compatibility
 
-- System: Windows 11 and Windows 10.
-- Modes: Light Mode, Dark Mode, Ink Mode, and Ink Dark Mode.
-- Languages: English and Chinese.
+- Windows 10 and Windows 11
+- Typora desktop app
+- Language coverage: English and Chinese (Source Han Serif CN). Ink modes also use Ink Free and FZSJ-SGLDXMHJW for handwriting.
 
 ## Screenshots
 
@@ -76,22 +75,37 @@ If you use a 2-in-1 PC such as Microsoft Surface for study or writing, or you si
 
 ![ink-preview3](/media/theme/liquid/ink-preview3.png)
 
-## How to install
+## Installation
 
-1. Download `Liquid.zip` from the [Releases](https://github.com/ruiyangzhou01/Liquid/releases) page of the [Liquid repository](https://github.com/ruiyangzhou01/Liquid/).
+1. Download `liquid.zip` from the [Releases](https://github.com/ruiyangzhou01/Liquid/releases) page.
 2. Open Typora settings. In **Preferences**, select **Appearance**, then click **Open Theme Folder**.
-3. Unzip `Liquid.zip` into the Theme Folder.
+3. Unzip and copy `liquid.css`, `liquid-dark.css`, `liquid-ink.css`, `liquid-ink-dark.css`, and the `liquid/` font folder into the theme folder.
 4. Restart Typora.
 5. Select the Liquid theme from the **Themes** menu in Typora.
-6. Open `Demo.md` to preview the local rendering.
+6. Open `Demo.md` from this repository (or the source code archive) to preview the local rendering.
 
-### Attention
+### Ink mode fonts
 
-Install the `liquid/FZSJ-SGLDXMHJW.TTF` font on your PC to render Chinese characters in Ink Mode.
+Install `FZSJ-SGLDXMHJW.TTF` from `dist/liquid` (or from the release `liquid/` folder) to render Chinese characters in Ink modes. `Inkfree.ttf` provides the handwriting font for Latin text.
 
-### Secondary Development Guidance
+## Build from source
 
-See [Document](https://github.com/ruiyangzhou01/Liquid/blob/main/doc/Document.md) for guidance on customizing the Liquid Theme.
+The build scripts are written for Windows paths.
+
+1. Install Python 3.
+2. Run `cd src/Deploy`.
+3. Run `python CombineCSS.py` to combine `src/liquid*.css` into `dist/*.css`.
+4. (Optional) Run `cd ../deploy` and `python CompressZip.py` to package `dist` as `liquid.zip`.
+
+## Customization
+
+- Add custom CSS via Typora (recommended): <https://support.typora.io/Add-Custom-CSS/>.
+- Edit the compiled files in the theme folder (`dist/*.css` in this repository).
+- For deeper changes, edit the modules in `src/liquid/` and rebuild. See the documentation below.
+
+## Documentation
+
+- [Liquid Theme Documentation](doc/Document.md)
 
 ## License
 

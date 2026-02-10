@@ -26,25 +26,24 @@ typora-copy-images-to: ../../media/theme/Liquid
     <img alt="issues closed" src="https://img.shields.io/github/issues-closed/ruiyangzhou01/liquid"/>
 </p>
 
-[English](https://github.com/ruiyangzhou01/Liquid/blob/main/README.md) • [中文](https://github.com/ruiyangzhou01/Liquid/blob/main/README_zh.md) • [Deutsch](https://github.com/ruiyangzhou01/Liquid/blob/main/README_de.md) • [Español](https://github.com/ruiyangzhou01/Liquid/blob/main/README_es.md) • [Français](https://github.com/ruiyangzhou01/Liquid/blob/main/README_fr.md)
+[English](https://github.com/ruiyangzhou01/Liquid/blob/main/README.md) • [中文](https://github.com/ruiyangzhou01/Liquid/blob/main/README_zh.md) • [Deutsch](https://github.com/ruiyangzhou01/Liquid/blob/main/README_de.md) • [Español](https://github.com/ruiyangzhou01/Liquid/blob/main/README_es.md) • [Français](https://github.com/ruiyangzhou01/Liquid/blob/main/README_fr.md) • [日本語](https://github.com/ruiyangzhou01/Liquid/blob/main/README_ja.md)
 
-Liquid 是为 Typora 设计的主题，灵感来源于 [Microsoft Fluent Design](https://www.microsoft.com/design/fluent/#/) 和 [Purple Theme](https://github.com/hliu202/typora-purple-theme)。它旨在为 Windows 11 提供现代化的视觉体验，包含渐变、云母材质和圆角矩形等元素。
+Liquid 是一个 Typora 主题，灵感来自 [Microsoft Fluent Design](https://www.microsoft.com/design/fluent/#/) 和 [Purple Theme](https://github.com/hliu202/typora-purple-theme)。它通过渐变、云母质感、圆角矩形和内置字体提供 Windows 11 风格的阅读与写作体验。主题包含四个基于模块化 CSS 的模式。
 
 ## 特性
 
-- 彩色指示
-- 渐变
-- 云母材质
-- 圆角矩形
-- 多模式支持
+- Fluent Design 风格：渐变、云母、圆角矩形和彩色指示
+- 四种模式：Light、Dark、Ink 和 Ink Dark
+- 定制的 CodeMirror 代码块样式
+- 内置衬线、手写和等宽字体
 
-## 支持
+## 兼容性
 
-- 系统：Windows 11 和 Windows 10。
-- 模式：Light Mode、Dark Mode、Ink Mode 和 Ink Dark Mode。
-- 语言：英语和中文。
+- Windows 10 和 Windows 11
+- Typora 桌面版
+- 语言覆盖：英文与中文（Source Han Serif CN）。Ink 模式还使用 Ink Free 与 FZSJ-SGLDXMHJW 作为手写字体。
 
-## Screenshots
+## 截图
 
 Liquid Theme 旨在为 Windows 11 中的 Typora 提供现代化视觉体验。它使用了现代 UI 元素，如渐变、云母材质和圆角矩形。主题支持中文和英文，并提供 Light Mode、Dark Mode、Ink Mode 和 Ink Dark Mode。
 
@@ -78,20 +77,35 @@ Liquid Theme 旨在为 Windows 11 中的 Typora 提供现代化视觉体验。�
 
 ## 安装
 
-1. 从 [Liquid 存储库](https://github.com/ruiyangzhou01/Liquid/)的 [Releases](https://github.com/ruiyangzhou01/Liquid/releases) 页面下载 **Liquid.zip**。
+1. 从 [Releases](https://github.com/ruiyangzhou01/Liquid/releases) 页面下载 `liquid.zip`。
 2. 在 Typora 设置中，点击 **偏好设置**，选择 **界面**，然后点击 **打开主题文件夹**。
-3. 将 **Liquid.zip** 解压到该文件夹中。
-4. 重启Typora。
+3. 解压并复制 `liquid.css`、`liquid-dark.css`、`liquid-ink.css`、`liquid-ink-dark.css` 和 `liquid/` 字体文件夹到主题目录。
+4. 重启 Typora。
 5. 在 Typora 的 **主题** 菜单中选择 Liquid 主题。
-6. 打开 `Demo.md` 预览本地渲染效果。
+6. 打开本仓库中的 `Demo.md`（或源码压缩包）预览渲染效果。
 
-### 注意
+### Ink 模式字体
 
-为了在 Ink Mode 下渲染中文字符，请在你的 PC 上安装 `liquid/FZSJ-SGLDXMHJW.TTF` 字体。
+安装 `dist/liquid`（或发布包 `liquid/` 文件夹）中的 `FZSJ-SGLDXMHJW.TTF`，即可在 Ink 模式下渲染中文字符。`Inkfree.ttf` 用于拉丁字符的手写字体。
 
-### 二次开发指南
+## 从源码构建
 
-请参阅[开发文档](https://github.com/ruiyangzhou01/Liquid/blob/main/doc/Document_zh.md)了解如何进行二次开发。
+构建脚本使用 Windows 路径编写。
+
+1. 安装 Python 3。
+2. 运行 `cd src/Deploy`。
+3. 运行 `python CombineCSS.py`，将 `src/liquid*.css` 合并到 `dist/*.css`。
+4. （可选）运行 `cd ../deploy` 和 `python CompressZip.py`，将 `dist` 打包为 `liquid.zip`。
+
+## 自定义
+
+- 通过 Typora 自定义 CSS（推荐）：<https://support.typora.io/Add-Custom-CSS/>。
+- 编辑主题目录中的编译后文件（本仓库的 `dist/*.css`）。
+- 深度定制可编辑 `src/liquid/` 模块并重新构建，详情参见下方文档。
+
+## 文档
+
+- [Liquid 主题文档](doc/Document_zh.md)
 
 ## 许可证
 
