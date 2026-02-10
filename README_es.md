@@ -28,25 +28,25 @@ typora-copy-images-to: ../../media/theme/Liquid
 
 [English](https://github.com/ruiyangzhou01/Liquid/blob/main/README.md) • [中文](https://github.com/ruiyangzhou01/Liquid/blob/main/README_zh.md) • [Deutsch](https://github.com/ruiyangzhou01/Liquid/blob/main/README_de.md) • [Español](https://github.com/ruiyangzhou01/Liquid/blob/main/README_es.md) • [Français](https://github.com/ruiyangzhou01/Liquid/blob/main/README_fr.md)
 
-Liquid is a Typora theme inspired by [Microsoft Fluent Design](https://www.microsoft.com/design/fluent/#/) and the [Purple Theme](https://github.com/hliu202/typora-purple-theme). It aims to deliver a modern Windows 11 look with gradients, mica material, and rounded rectangles.
+Liquid es un tema de Typora inspirado en [Microsoft Fluent Design](https://www.microsoft.com/design/fluent/#/) y el [Purple Theme](https://github.com/hliu202/typora-purple-theme). Su objetivo es ofrecer un aspecto moderno de Windows 11 con degradados, material mica y rectángulos redondeados.
 
-## Features
+## Características
 
-- Colorful indicators
-- Gradients
-- Mica material
-- Rounded rectangles
-- Multiple modes
+- Indicadores coloridos
+- Degradados
+- Material mica
+- Rectángulos redondeados
+- Múltiples modos
 
-## Support List
+## Compatibilidad
 
-- System: Windows 11 and Windows 10.
-- Modes: Light Mode, Dark Mode, Ink Mode, and Ink Dark Mode.
-- Languages: English and Chinese.
+- Sistema: Windows 11 y Windows 10.
+- Modos: Light Mode, Dark Mode, Ink Mode e Ink Dark Mode.
+- Idiomas: inglés y chino.
 
-## Screenshots
+## Capturas de pantalla
 
-Liquid Theme aims to provide a modern Windows 11 visual experience in Typora. It uses UI elements such as gradients, mica material, and rounded rectangles. The theme supports English and Chinese, and it provides Light Mode, Dark Mode, Ink Mode, and Ink Dark Mode.
+Liquid Theme busca ofrecer una experiencia visual moderna de Windows 11 en Typora. Utiliza elementos de interfaz como degradados, material mica y rectángulos redondeados. El tema admite inglés y chino, y ofrece Light Mode, Dark Mode, Ink Mode e Ink Dark Mode.
 
 ![preview](./media/theme/liquid/preview.png)
 
@@ -68,7 +68,7 @@ Liquid Theme aims to provide a modern Windows 11 visual experience in Typora. It
 
 ### Ink Mode & Ink Dark Mode
 
-If you use a 2-in-1 PC such as Microsoft Surface for study or writing, or you simply prefer handwritten fonts, Ink Mode provides a handwriting-style reading and writing experience in Typora.
+Si usas un PC 2 en 1 como Microsoft Surface para estudiar o escribir, o simplemente prefieres fuentes manuscritas, Ink Mode ofrece una experiencia de lectura y escritura con estilo manuscrito en Typora.
 
 ![ink-preview1](/media/theme/liquid/ink-preview1.png)
 
@@ -76,22 +76,22 @@ If you use a 2-in-1 PC such as Microsoft Surface for study or writing, or you si
 
 ![ink-preview3](/media/theme/liquid/ink-preview3.png)
 
-## How to install
+## Instalación
 
-1. Download `Liquid.zip` from the [Releases](https://github.com/ruiyangzhou01/Liquid/releases) page of the [Liquid repository](https://github.com/ruiyangzhou01/Liquid/).
-2. Open Typora settings. In **Preferences**, select **Appearance**, then click **Open Theme Folder**.
-3. Unzip `Liquid.zip` into the Theme Folder.
-4. Restart Typora.
-5. Select the Liquid theme from the **Themes** menu in Typora.
-6. Open `Demo.md` to preview the local rendering.
+1. Descarga `Liquid.zip` desde la página de [Releases](https://github.com/ruiyangzhou01/Liquid/releases) del [repositorio Liquid](https://github.com/ruiyangzhou01/Liquid/).
+2. Abre la configuración de Typora. En **Preferences**, selecciona **Appearance** y haz clic en **Open Theme Folder**.
+3. Descomprime `Liquid.zip` en la carpeta de temas.
+4. Reinicia Typora.
+5. Selecciona el tema Liquid desde el menú **Themes**.
+6. Abre `Demo.md` para previsualizar el renderizado local.
 
-### Attention
+### Atención
 
-Install the `liquid/FZSJ-SGLDXMHJW.TTF` font on your PC to render Chinese characters in Ink Mode.
+Instala la fuente `liquid/FZSJ-SGLDXMHJW.TTF` en tu PC para mostrar caracteres chinos en Ink Mode.
 
-### Secondary Development Guidance
+### Guía para desarrollo secundario
 
-See [Document](https://github.com/ruiyangzhou01/Liquid/blob/main/doc/Document.md) for guidance on customizing the Liquid Theme.
+Consulta [Document](https://github.com/ruiyangzhou01/Liquid/blob/main/doc/Document.md) para obtener orientación sobre cómo personalizar el tema Liquid.
 
 ## License
 
