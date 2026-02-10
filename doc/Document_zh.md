@@ -67,7 +67,7 @@ src/
 
 ## 从源码构建
 
-构建脚本使用 Windows 风格路径，建议在 Windows 上执行。
+构建脚本使用 Windows 风格路径，建议在 Windows 上执行。CombineCSS.py 位于 `src/Deploy`（大写 D），CompressZip.py 位于 `src/deploy`（小写 d）。在区分大小写的文件系统中请使用准确的目录名。
 
 1. 安装 Python 3。
 2. 运行 `cd src/Deploy`。

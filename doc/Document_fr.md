@@ -67,7 +67,7 @@ src/
 
 ## Construire depuis la source
 
-Les scripts de build utilisent des chemins Windows et sont prévus pour Windows.
+Les scripts de build utilisent des chemins Windows et sont prévus pour Windows. CombineCSS.py se trouve dans `src/Deploy` (D majuscule) et CompressZip.py dans `src/deploy` (d minuscule). Sur les systèmes sensibles à la casse, utilisez le nom exact.
 
 1. Installez Python 3.
 2. Exécutez `cd src/Deploy`.

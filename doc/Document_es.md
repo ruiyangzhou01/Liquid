@@ -67,7 +67,7 @@ src/
 
 ## Compilar desde el código fuente
 
-Los scripts de compilación usan rutas de Windows y están pensados para Windows.
+Los scripts de compilación usan rutas de Windows y están pensados para Windows. CombineCSS.py está en `src/Deploy` (D mayúscula) y CompressZip.py en `src/deploy` (d minúscula). En sistemas sensibles a mayúsculas utiliza el nombre exacto.
 
 1. Instala Python 3.
 2. Ejecuta `cd src/Deploy`.

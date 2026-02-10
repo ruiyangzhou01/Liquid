@@ -67,7 +67,7 @@ src/
 
 ## Build From Source
 
-The build scripts use Windows-style paths and are intended to run on Windows.
+The build scripts use Windows-style paths and are intended to run on Windows. CombineCSS.py lives in `src/Deploy` (capital D) and CompressZip.py in `src/deploy` (lowercase). On case-sensitive file systems, use the exact folder names.
 
 1. Install Python 3.
 2. Run `cd src/Deploy`.

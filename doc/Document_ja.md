@@ -67,7 +67,7 @@ src/
 
 ## ソースからビルド
 
-ビルドスクリプトは Windows のパス表記を前提にしています。
+ビルドスクリプトは Windows のパス表記を前提にしています。CombineCSS.py は `src/Deploy`（D 大文字）、CompressZip.py は `src/deploy`（d 小文字）にあります。大文字小文字を区別する環境では正確なフォルダ名を使用してください。
 
 1. Python 3 をインストールします。
 2. `cd src/Deploy` を実行します。
