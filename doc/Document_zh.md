@@ -115,4 +115,4 @@ src/
 
 ## 字体说明
 
-Ink 模式依赖 `Inkfree.ttf`（拉丁文字）与 `FZSJ-SGLDXMHJW.TTF`（中文手写）。如需在 Ink 模式显示中文，请本地安装 `FZSJ-SGLDXMHJW.TTF`。
+Ink 模式依赖 `Inkfree`（拉丁文字）与 `FZSJ-SGLDXMHJW`（中文手写）。字体已通过 `@font-face` 打包，通常不需要系统安装。在区分大小写的文件系统中，请确认 `liquid/` 目录的文件名与 CSS 引用一致（`inkfree.ttf` 与 `FZSJ-SGLDXMHJW.ttf`），必要时重命名文件或修改 CSS。

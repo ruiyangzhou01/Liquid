@@ -115,4 +115,4 @@ Typora のカスタム CSS 機能を使って上書きします。詳しくは <
 
 ## フォントに関する注意
 
-Ink モードでは、ラテン文字に `Inkfree.ttf`、中国語に `FZSJ-SGLDXMHJW.TTF` を使用します。Ink モードで中国語を表示する場合は `FZSJ-SGLDXMHJW.TTF` をローカルにインストールしてください。
+Ink モードでは、ラテン文字に `Inkfree`、中国語に `FZSJ-SGLDXMHJW` を使用します。フォントは同梱され `@font-face` で読み込まれるため、通常はシステムへのインストールは不要です。大文字小文字を区別する環境では `liquid/` のファイル名が CSS の参照（`inkfree.ttf` と `FZSJ-SGLDXMHJW.ttf`）と一致するよう確認し、必要に応じてリネームまたは CSS を調整してください。

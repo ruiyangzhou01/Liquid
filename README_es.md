@@ -86,7 +86,7 @@ Si usas un PC 2 en 1 como Microsoft Surface para estudiar o escribir, o simpleme
 
 ### Fuentes del modo Ink
 
-Instala `FZSJ-SGLDXMHJW.TTF` desde `dist/liquid` (o desde la carpeta `liquid/` del release) para renderizar caracteres chinos en los modos Ink. `Inkfree.ttf` aporta la letra manuscrita para texto latino.
+Liquid incluye las fuentes Ink y las carga mediante `@font-face`, por lo que normalmente no es necesario instalarlas en el sistema. En sistemas sensibles a mayúsculas, asegúrate de que los nombres de archivo en `liquid/` coincidan con lo que espera el CSS (`inkfree.ttf` y `FZSJ-SGLDXMHJW.ttf`); renombra los archivos o ajusta el CSS si es necesario. `FZSJ-SGLDXMHJW` renderiza caracteres chinos en los modos Ink y `Inkfree` aporta la letra manuscrita para texto latino.
 
 ## Compilar desde el código fuente
 

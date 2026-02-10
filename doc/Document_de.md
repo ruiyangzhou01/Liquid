@@ -115,4 +115,4 @@ Für tiefere Anpassungen bearbeite die Module unter `src/liquid/` und baue mit `
 
 ## Hinweise zu Schriftarten
 
-Die Ink-Modi nutzen `Inkfree.ttf` für lateinische Handschrift und `FZSJ-SGLDXMHJW.TTF` für chinesische Zeichen. Installiere `FZSJ-SGLDXMHJW.TTF` lokal, wenn du chinesische Zeichen im Ink-Modus benötigst.
+Die Ink-Modi nutzen `Inkfree` für lateinische Handschrift und `FZSJ-SGLDXMHJW` für chinesische Zeichen. Die Schriften sind gebündelt und werden via `@font-face` geladen, daher ist eine systemweite Installation meist nicht nötig. Auf dateisensitiven Systemen müssen die Dateinamen im Ordner `liquid/` den CSS-Referenzen entsprechen (`inkfree.ttf` und `FZSJ-SGLDXMHJW.ttf`), andernfalls Dateien umbenennen oder das CSS anpassen.

@@ -86,7 +86,7 @@ Si vous utilisez un PC 2-en-1 comme Microsoft Surface pour étudier ou écrire, 
 
 ### Polices du mode Ink
 
-Installez `FZSJ-SGLDXMHJW.TTF` depuis `dist/liquid` (ou le dossier `liquid/` du release) pour afficher les caractères chinois en mode Ink. `Inkfree.ttf` fournit la police manuscrite pour le texte latin.
+Liquid inclut les polices Ink et les charge via `@font-face`, donc l’installation système n’est généralement pas nécessaire. Sur les systèmes sensibles à la casse, assurez-vous que les noms de fichiers du dossier `liquid/` correspondent aux références CSS (`inkfree.ttf` et `FZSJ-SGLDXMHJW.ttf`) ; renommez les fichiers ou modifiez le CSS si besoin. `FZSJ-SGLDXMHJW` affiche les caractères chinois en mode Ink et `Inkfree` fournit la police manuscrite pour le texte latin.
 
 ## Construire depuis la source
 

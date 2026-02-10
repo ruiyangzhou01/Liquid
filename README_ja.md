@@ -86,7 +86,7 @@ Microsoft Surface のような 2-in-1 PC で学習や執筆を行う場合や、
 
 ### Ink モードのフォント
 
-Ink モードで中国語を表示するには、`dist/liquid`（またはリリースの `liquid/` フォルダ）にある `FZSJ-SGLDXMHJW.TTF` をインストールしてください。`Inkfree.ttf` はラテン文字用の手書きフォントです。
+Liquid には Ink 用フォントが同梱され、`@font-face` で読み込まれるため、通常はシステムへのインストールは不要です。大文字小文字を区別する環境では `liquid/` フォルダのファイル名が CSS の参照（`inkfree.ttf` と `FZSJ-SGLDXMHJW.ttf`）と一致するよう確認し、必要に応じてリネームまたは CSS を調整してください。`FZSJ-SGLDXMHJW` は Ink モードの中国語、`Inkfree` はラテン文字の手書き用です。
 
 ## ソースからビルド
 

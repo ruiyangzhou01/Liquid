@@ -115,4 +115,4 @@ Pour des changements plus profonds, modifiez les modules sous `src/liquid/` et r
 
 ## Notes sur les polices
 
-Les modes Ink utilisent `Inkfree.ttf` pour l’écriture manuscrite latine et `FZSJ-SGLDXMHJW.TTF` pour les caractères chinois. Installez `FZSJ-SGLDXMHJW.TTF` localement si vous avez besoin d’afficher le chinois en mode Ink.
+Les modes Ink utilisent `Inkfree` pour l’écriture manuscrite latine et `FZSJ-SGLDXMHJW` pour les caractères chinois. Les polices sont incluses et chargées via `@font-face`, donc l’installation système n’est généralement pas nécessaire. Sur les systèmes sensibles à la casse, assurez-vous que les noms de fichiers dans `liquid/` correspondent au CSS (`inkfree.ttf` et `FZSJ-SGLDXMHJW.ttf`), ou renommez les fichiers/modifiez le CSS.

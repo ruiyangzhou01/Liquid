@@ -86,7 +86,7 @@ Wenn du einen 2-in-1-PC wie Microsoft Surface zum Lernen oder Schreiben nutzt od
 
 ### Ink-Mode-Schriften
 
-Installiere `FZSJ-SGLDXMHJW.TTF` aus `dist/liquid` (oder aus dem Release-Ordner `liquid/`), um chinesische Zeichen im Ink-Modus darzustellen. `Inkfree.ttf` liefert die Handschrift für lateinische Zeichen.
+Liquid bringt die Ink-Schriften mit und lädt sie über `@font-face`, daher ist eine systemweite Installation meist nicht nötig. Auf dateisensitiven Systemen müssen die Dateinamen im Ordner `liquid/` den CSS-Referenzen entsprechen (`inkfree.ttf` und `FZSJ-SGLDXMHJW.ttf`); benenne die Dateien um oder passe das CSS an, falls nötig. `FZSJ-SGLDXMHJW` rendert chinesische Zeichen im Ink-Modus, `Inkfree` liefert die Handschrift für lateinische Zeichen.
 
 ## Aus dem Quellcode bauen
 

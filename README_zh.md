@@ -86,7 +86,7 @@ Liquid Theme 旨在为 Windows 11 中的 Typora 提供现代化视觉体验。�
 
 ### Ink 模式字体
 
-安装 `dist/liquid`（或发布包 `liquid/` 文件夹）中的 `FZSJ-SGLDXMHJW.TTF`，即可在 Ink 模式下渲染中文字符。`Inkfree.ttf` 用于拉丁字符的手写字体。
+Liquid 已通过 `@font-face` 打包 Ink 字体，通常不需要系统安装。在区分大小写的文件系统中，请确认 `liquid/` 目录的字体文件名与 CSS 引用一致（`inkfree.ttf` 与 `FZSJ-SGLDXMHJW.ttf`），必要时重命名或修改 CSS。`FZSJ-SGLDXMHJW` 用于 Ink 模式中文字符，`Inkfree` 用于拉丁字符的手写字体。
 
 ## 从源码构建
 

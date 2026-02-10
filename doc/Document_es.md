@@ -115,4 +115,4 @@ Para cambios profundos, edita los módulos en `src/liquid/` y recompila con `Com
 
 ## Notas sobre fuentes
 
-Los modos Ink usan `Inkfree.ttf` para manuscrito latino y `FZSJ-SGLDXMHJW.TTF` para caracteres chinos. Instala `FZSJ-SGLDXMHJW.TTF` localmente si necesitas mostrar chino en los modos Ink.
+Los modos Ink usan `Inkfree` para manuscrito latino y `FZSJ-SGLDXMHJW` para caracteres chinos. Las fuentes se incluyen y se cargan mediante `@font-face`, por lo que normalmente no hace falta instalarlas en el sistema. En sistemas sensibles a mayúsculas, asegúrate de que los nombres de archivo en `liquid/` coincidan con el CSS (`inkfree.ttf` y `FZSJ-SGLDXMHJW.ttf`), o renombra los archivos/ajusta el CSS.

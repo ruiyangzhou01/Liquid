@@ -86,7 +86,7 @@ If you use a 2-in-1 PC such as Microsoft Surface for study or writing, or you si
 
 ### Ink mode fonts
 
-Install `FZSJ-SGLDXMHJW.TTF` from `dist/liquid` (or from the release `liquid/` folder) to render Chinese characters in Ink modes. `Inkfree.ttf` provides the handwriting font for Latin text.
+Liquid bundles the Ink fonts and loads them via `@font-face`, so you usually do not need to install them system-wide. On case-sensitive file systems, make sure the font filenames in `liquid/` match the CSS references (`inkfree.ttf` and `FZSJ-SGLDXMHJW.ttf`); rename the files or update the CSS if needed. `FZSJ-SGLDXMHJW` renders Chinese characters in Ink modes, and `Inkfree` provides the handwriting font for Latin text.
 
 ## Build from source
 

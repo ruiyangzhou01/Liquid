@@ -115,4 +115,4 @@ For deeper changes, edit the module files under `src/liquid/` and rebuild with `
 
 ## Font Notes
 
-Ink modes rely on `Inkfree.ttf` for Latin handwriting and `FZSJ-SGLDXMHJW.TTF` for Chinese handwriting. Install the `FZSJ-SGLDXMHJW.TTF` font locally if you need Chinese characters in Ink modes.
+Ink modes rely on `Inkfree` for Latin handwriting and `FZSJ-SGLDXMHJW` for Chinese handwriting. The fonts are bundled and loaded via `@font-face`, so system-wide installation is usually unnecessary. On case-sensitive file systems, ensure the filenames in `liquid/` match the CSS references (`inkfree.ttf` and `FZSJ-SGLDXMHJW.ttf`), or rename the files/update the CSS to match.
