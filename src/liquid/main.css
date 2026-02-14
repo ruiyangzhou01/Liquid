@@ -17,37 +17,6 @@
         max-width: 100%;
     }
 
-    /*
-     * PDF readers like SumatraPDF may not render text clipped to a gradient
-     * background, resulting in invisible headings/links when color is transparent.
-     * Fall back to solid colors for print/PDF output.
-     */
-    #write h1,
-    #write h2,
-    #write h3,
-    #write h4,
-    #write h5,
-    #write h6,
-    #write a {
-        background: none;
-        -webkit-background-clip: border-box;
-        background-clip: border-box;
-        color: inherit;
-    }
-
-    #write h1,
-    #write h2,
-    #write h3,
-    #write h4,
-    #write h5,
-    #write h6 {
-        color: var(--title-color);
-    }
-
-    #write a {
-        color: var(--link-color);
-    }
-
     @page {
         size: A4; /* PDF A4 */
         margin-left: 0;
@@ -182,6 +151,40 @@ a {
     border-bottom: 1px solid var(--link-color);
     color: var(--link-color);
     text-decoration: none;
+}
+
+/* Print-only fallback must come after gradient text rules with the same specificity. */
+@media print {
+    /*
+     * PDF readers like SumatraPDF may not render text clipped to a gradient
+     * background, resulting in invisible headings/links when color is transparent.
+     * Fall back to solid colors for print/PDF output.
+     */
+    #write h1,
+    #write h2,
+    #write h3,
+    #write h4,
+    #write h5,
+    #write h6,
+    #write a {
+        background: none;
+        -webkit-background-clip: border-box;
+        background-clip: border-box;
+        color: inherit;
+    }
+
+    #write h1,
+    #write h2,
+    #write h3,
+    #write h4,
+    #write h5,
+    #write h6 {
+        color: var(--title-color);
+    }
+
+    #write a {
+        color: var(--link-color);
+    }
 }
 
 .md-content {
