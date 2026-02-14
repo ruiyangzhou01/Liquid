@@ -1,5 +1,4 @@
-/* 打印 */
-/* print */
+/* Print settings */
 @media print {
     html {
         font-size: 0.9rem;
@@ -34,7 +33,7 @@ html {
 }
 
 
-/* 页边距 和 页面大小 */
+/* Page margins and size */
 #write {
     font-family: var(--base-font);
     /* max-width: 914px; */
@@ -64,8 +63,7 @@ body > *:last-child {
 }
 
 
-/* 标题 */
-/* title */
+/* Headings */
 h1,
 h2,
 h3,
@@ -134,8 +132,7 @@ h6 {
 }
 
 
-/* 超链接 */
-/* hyperlink */
+/* Hyperlinks */
 a {
     color: var(--link-color);
     text-decoration: none;
@@ -176,7 +173,7 @@ hr {
     border-top: 1px solid var(--border);
 }
 
-/* 列表 */
+/* Lists */
 li > ol,
 li > ul {
     margin: 0 0;
@@ -207,7 +204,7 @@ ul li {
 }
 
 
-/* 表格 */
+/* Tables */
 table {
     margin-bottom: 1.4rem;
 }
@@ -234,7 +231,7 @@ thead {
 }
 
 
-/* 引用 */
+/* Blockquotes */
 blockquote {
     border-left: 0.22em solid var(--blue);
     padding: 0.2em 0 0.2em 1em;
@@ -243,7 +240,7 @@ blockquote {
 }
 
 
-/* 文字样式 */
+/* Inline text styles */
 strong,
 em,
 code,
@@ -256,19 +253,18 @@ mark {
     background-color: var(--inline-surface);
 }
 
-/* 粗体 */
+/* Bold text */
 #write strong {
     font-weight: bold;
 
 }
 
-/* 斜体 */
+/* Italic text */
 #write em {
 
 }
 
-/* 行间公式 */
-/* inline code */
+/* Inline code */
 #write code,
 tt {
     font-family: var(--monospace);
@@ -281,8 +277,7 @@ tt {
     background-color: var(--meta-surface);
 }
 
-/* 高亮 */
-/* highlight */
+/* Highlighted text */
 #write mark {
     background-color: #f8e7ad;
     color: #b9671d;
@@ -311,8 +306,7 @@ tt {
     bottom: 0.375rem;
 }
 
-/* 图片 */
-/* imag */
+/* Images */
 .md-image > .md-meta {
     border-radius: 16px;
     font-family: var(--monospace);
@@ -321,20 +315,19 @@ tt {
     color: inherit;
 }
 
-/* 图片靠左显示 */
+/* Align image-only paragraphs to the left */
 /* p .md-image:only-child {
   width: auto;
   text-align: left;
   margin-left: 2rem;
 } */
 
-/* 写![shadow-...]() 显示图片阴影 */
+/* Add an image shadow when alt starts with "shadow-" */
 img[alt|="shadow"] {
     box-shadow: 0.4rem 0.8rem 1.6rem var(--shadow-color);
 }
 
-/* 目录 */
-/* TOC */
+/* Table of contents */
 #write .md-toc {
     background-color: var(--surface-color);
     border: 1px solid var(--surface-border);
@@ -396,7 +389,7 @@ footer {
     --item-hover-bg-color: #e6f0fe;
 }
 
-/* 代码段 背景 */
+/* Code block selection background */
 pre {
     --select-text-bg-color: #e4d4f5;
 }
@@ -497,8 +490,7 @@ pre {
 }
 
 
-/* 侧栏 */
-/* sidebar */
+/* Sidebar */
 #typora-sidebar,
 .typora-node #typora-sidebar {
     box-shadow: 4px 0 24px var(--shadow-color);
@@ -509,7 +501,7 @@ pre {
     font-size: 0.9rem;
 }
 
-/* 选中的文字 */
+/* Selected text */
 ::selection {
     background: var(--selection-bg);
     color: var(--blue);
