@@ -28,80 +28,64 @@ typora-copy-images-to: ../../media/theme/Liquid
 
 [English](https://github.com/ruiyangzhou01/Liquid/blob/main/README.md) • [中文](https://github.com/ruiyangzhou01/Liquid/blob/main/README_zh.md) • [Deutsch](https://github.com/ruiyangzhou01/Liquid/blob/main/README_de.md) • [Español](https://github.com/ruiyangzhou01/Liquid/blob/main/README_es.md) • [Français](https://github.com/ruiyangzhou01/Liquid/blob/main/README_fr.md) • [日本語](https://github.com/ruiyangzhou01/Liquid/blob/main/README_ja.md)
 
-Liquid es un tema de Typora inspirado en [Microsoft Fluent Design](https://www.microsoft.com/design/fluent/#/) y en [Purple Theme](https://github.com/hliu202/typora-purple-theme). Ofrece una experiencia de lectura y escritura con estilo Windows 11 mediante degradados, superficies tipo mica, rectángulos redondeados y fuentes integradas. El tema incluye cuatro variantes construidas con CSS modular.
+Liquid es un tema de Typora inspirado en [Microsoft Fluent Design](https://www.microsoft.com/design/fluent/#/) y [Purple Theme](https://github.com/hliu202/typora-purple-theme). El repositorio actual incluye archivos listos para usar en `src/` (sin salida `dist/` separada).
+
+## Estado actual
+
+- Proyecto mantenido con cuatro variantes: `liquid`, `liquid-dark`, `liquid-ink`, `liquid-ink-dark`
+- CSS fuente y fuentes tipográficas incluidos directamente en el repositorio
+- Documentación y traducciones adaptadas al estado actual
 
 ## Características
 
-- Estilo Fluent Design con degradados, mica, rectángulos redondeados e indicadores coloridos
-- Cuatro variantes: Light, Dark, Ink e Ink Dark
-- Estilos personalizados de CodeMirror para bloques de código
-- Fuentes serif, manuscritas y monoespaciadas integradas
+- Estilo Fluent: degradados, esquinas redondeadas y acentos visuales
+- Variantes Light / Dark / Ink / Ink Dark
+- Estilos de CodeMirror personalizados para bloques de código
+- Fuentes incluidas para texto serif, código monoespaciado y estilo manuscrito Ink
 
-## Compatibilidad
+## Estructura del repositorio
 
-- Windows 10 y Windows 11
-- Aplicación de escritorio de Typora
-- Cobertura de idiomas: inglés y chino (Source Han Serif CN). Los modos Ink también usan Ink Free y FZSJ-SGLDXMHJW como letra manuscrita.
-
-## Capturas de pantalla
-
-Liquid Theme busca ofrecer una experiencia visual moderna de Windows 11 en Typora. Usa elementos de interfaz como degradados, material tipo mica y rectángulos redondeados. El tema admite inglés y chino, y proporciona Light Mode, Dark Mode, Ink Mode e Ink Dark Mode.
-
-![preview](/media/theme/liquid/preview.png)
-
-### Light Mode
-
-![light-preview1](/media/theme/liquid/light-preview1.png)
-
-![light-preview2](/media/theme/liquid/light-preview2.png)
-
-![light-preview3](/media/theme/liquid/light-preview3.png)
-
-### Dark Mode
-
-![dark-preview1](/media/theme/liquid/dark-preview1.png)
-
-![dark-preview2](/media/theme/liquid/dark-preview2.png)
-
-![dark-preview3](/media/theme/liquid/dark-preview3.png)
-
-### Ink Mode & Ink Dark Mode
-
-Si usas un PC 2 en 1 como Microsoft Surface para estudiar o escribir, o simplemente prefieres fuentes manuscritas, Ink Mode ofrece una experiencia de lectura y escritura con estilo manuscrito en Typora.
-
-![ink-preview1](/media/theme/liquid/ink-preview1.png)
-
-![ink-preview2](/media/theme/liquid/ink-preview2.png)
-
-![ink-preview3](/media/theme/liquid/ink-preview3.png)
+```text
+src/
+  liquid.css
+  liquid-dark.css
+  liquid-ink.css
+  liquid-ink-dark.css
+  liquid/
+    *.css
+    *.ttf
+    *.woff2
+Demo.md
+README*.md
+doc/Document*.md
+media/
+assets/
+```
 
 ## Instalación
 
-1. Descarga `liquid.zip` desde la página de [Releases](https://github.com/ruiyangzhou01/Liquid/releases).
-2. En Typora, abre **Preferences** → **Appearance** → **Open Theme Folder**.
-3. Descomprime y copia `liquid.css`, `liquid-dark.css`, `liquid-ink.css`, `liquid-ink-dark.css` y la carpeta de fuentes `liquid/` en la carpeta del tema.
-4. Reinicia Typora.
-5. Selecciona el tema Liquid en el menú **Themes**.
-6. Abre `Demo.md` de este repositorio (o del archivo del código fuente) para previsualizar el resultado.
-
-### Fuentes del modo Ink
-
-Liquid incluye las fuentes Ink y las carga mediante `@font-face`, por lo que normalmente no es necesario instalarlas en el sistema. En sistemas sensibles a mayúsculas, asegúrate de que los nombres de archivo en `liquid/` coincidan con lo que espera el CSS (`inkfree.ttf` y `FZSJ-SGLDXMHJW.ttf`); renombra los archivos o ajusta el CSS si es necesario. `FZSJ-SGLDXMHJW` renderiza caracteres chinos en los modos Ink y `Inkfree` aporta la letra manuscrita para texto latino.
-
-## Compilar desde el código fuente
-
-Los scripts de compilación usan rutas de Windows.
-
-1. Instala Python 3.
-2. Ejecuta `cd src/Deploy`.
-3. Ejecuta `python CombineCSS.py` para combinar `src/liquid*.css` en `dist/*.css`.
-4. (Opcional) Ejecuta `cd ../deploy` y `python CompressZip.py` para empaquetar `dist` como `liquid.zip`.
+1. Descarga `liquid.zip` desde [Releases](https://github.com/ruiyangzhou01/Liquid/releases) o clona este repositorio.
+2. En Typora: **Preferences** → **Appearance** → **Open Theme Folder**.
+3. Copia al directorio de temas:
+   - `src/liquid.css`
+   - `src/liquid-dark.css`
+   - `src/liquid-ink.css`
+   - `src/liquid-ink-dark.css`
+   - `src/liquid/` (carpeta completa)
+4. Reinicia Typora y selecciona una variante Liquid.
+5. Abre `Demo.md` para previsualizar.
 
 ## Personalización
 
-- Añade CSS personalizado en Typora (recomendado): <https://support.typora.io/Add-Custom-CSS/>.
-- Edita los archivos compilados en la carpeta del tema (`dist/*.css` en este repositorio).
-- Para cambios más profundos, edita los módulos en `src/liquid/` y vuelve a compilar. Consulta la documentación abajo.
+- Cambios rápidos: edita `liquid*.css` directamente en la carpeta de temas.
+- Cambios profundos: edita módulos de `src/liquid/` (`main.css`, `color-*.css`, `font*.css`, `CodeMirror*.css`, `custom-*.css`).
+- Overrides propios con CSS personalizado de Typora: <https://support.typora.io/Add-Custom-CSS/>.
+
+## Solución de problemas
+
+- **El tema no aparece**: confirma que los cuatro `liquid*.css` están en la raíz de la carpeta de temas.
+- **Faltan fuentes o estilo Ink**: confirma que `liquid/` está junto a los CSS.
+- **Sistemas sensibles a mayúsculas**: usa nombres exactos según CSS (`Inkfree.ttf`, `FZSJ-SGLDXMHJW.TTF`).
 
 ## Documentación
 

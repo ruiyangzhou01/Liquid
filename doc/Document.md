@@ -4,54 +4,17 @@
 
 ## Overview
 
-Liquid is a Typora theme inspired by Microsoft Fluent Design. This document explains the file layout, build workflow, and customization options based on the current repository structure.
+Liquid is a Typora theme inspired by Microsoft Fluent Design. The current repository is source-first: theme entry files and modules are kept directly under `src/`.
 
-## File Structure
-
-### Release Package (`liquid.zip`)
-
-The release archive is produced from the `dist` folder and contains the compiled CSS plus fonts:
+## Repository layout
 
 ```text
-liquid.css
-liquid-dark.css
-liquid-ink.css
-liquid-ink-dark.css
-liquid/
-  JetBrainsMono-Bold.woff2
-  JetBrainsMono-Regular.woff2
-  SourceHanSerifCN-Bold.ttf
-  SourceHanSerifCN-Regular.ttf
-  Inkfree.ttf
-  FZSJ-SGLDXMHJW.TTF
-```
-
-### Repository Layout
-
-```text
-Demo.md
-README.md
-README_*.md
-LICENSE
-media/                # preview images
-font/                 # raw font sources
-  JetBrainsMono-2.242/
-  SourceHanSerifCN/
-dist/                 # compiled CSS + font assets (release contents)
+src/
   liquid.css
   liquid-dark.css
   liquid-ink.css
   liquid-ink-dark.css
   liquid/
-    *.ttf
-    *.woff2
-doc/                  # documentation translations
-src/
-  liquid.css           # entry point (light)
-  liquid-dark.css      # entry point (dark)
-  liquid-ink.css       # entry point (ink)
-  liquid-ink-dark.css  # entry point (ink dark)
-  liquid/              # CSS modules
     main.css
     color-light.css
     color-dark.css
@@ -61,58 +24,55 @@ src/
     CodeMirror-dark.css
     custom-ink.css
     custom-dark.css
-  Deploy/CombineCSS.py # combines @import files into dist
-  deploy/CompressZip.py # packages dist into liquid.zip
+    Inkfree.ttf
+    FZSJ-SGLDXMHJW.TTF
+    SourceHanSerifCN-*.ttf
+    JetBrainsMono-*.woff2
+Demo.md
+doc/Document*.md
+README*.md
+media/
+assets/
 ```
 
-## Build From Source
+## Theme variants
 
-The build scripts use Windows-style paths and are intended to run on Windows. CombineCSS.py lives in `src/Deploy` (capital D) and CompressZip.py in `src/deploy` (lowercase). On case-sensitive file systems, use the exact folder names.
+- `liquid.css`: light mode
+- `liquid-dark.css`: dark mode
+- `liquid-ink.css`: ink mode
+- `liquid-ink-dark.css`: ink dark mode
 
-1. Install Python 3.
-2. Run `cd src/Deploy`.
-3. Run `python CombineCSS.py` to recursively expand `@import` statements and write the compiled files into `dist/`.
-4. (Optional) Run `cd ../deploy` and `python CompressZip.py` to create `liquid.zip` from the `dist` folder.
+## How to install
 
-## CSS Module Map
+1. Open Typora theme folder from **Preferences → Appearance → Open Theme Folder**.
+2. Copy the four `src/liquid*.css` files into that folder.
+3. Copy the full `src/liquid/` folder next to the CSS files.
+4. Restart Typora and select a Liquid variant.
 
-The entry-point CSS files in `src/` import smaller modules under `src/liquid/`:
+## Module map
 
-- `liquid.css`: light mode (imports `font.css`, `color-light.css`, `CodeMirror.css`, `main.css`).
-- `liquid-dark.css`: dark mode (imports `font.css`, `color-dark.css`, `CodeMirror-dark.css`, `main.css`, `custom-dark.css`).
-- `liquid-ink.css`: ink mode (imports `font-ink.css`, `color-light.css`, `CodeMirror.css`, `main.css`, `custom-ink.css`).
-- `liquid-ink-dark.css`: ink dark mode (imports `font-ink.css`, `color-dark.css`, `CodeMirror-dark.css`, `main.css`, `custom-ink.css`, `custom-dark.css`).
+Entry files import modules from `src/liquid/`:
 
-Key modules:
+- Typography/layout: `main.css`
+- Color tokens: `color-light.css`, `color-dark.css`
+- Font stacks: `font.css`, `font-ink.css`
+- Code block styles: `CodeMirror.css`, `CodeMirror-dark.css`
+- Variant overrides: `custom-ink.css`, `custom-dark.css`
 
-- `main.css`: shared layout, typography, and component styling.
-- `color-light.css` / `color-dark.css`: color variables for light and dark palettes.
-- `font.css`: default fonts (Source Han Serif CN + JetBrains Mono).
-- `font-ink.css`: handwriting fonts (Ink Free + FZSJ-SGLDXMHJW).
-- `CodeMirror.css` / `CodeMirror-dark.css`: code block theme styles.
-- `custom-ink.css`: ink-specific typography adjustments.
-- `custom-dark.css`: dark-mode UI tweaks.
+## Customization workflow
 
-## Customization Options
+1. Start with direct CSS edits in installed `liquid*.css` if you only need quick adjustments.
+2. For structural changes, edit module files in `src/liquid/`.
+3. Keep your personal overrides in Typora custom CSS whenever possible to simplify updates.
 
-### 1. Add Custom CSS (Recommended)
+## Font notes
 
-Use Typora’s custom CSS support to layer your own overrides without touching the theme files. Refer to <https://support.typora.io/Add-Custom-CSS/>.
+- Ink variants use `Inkfree` for Latin handwriting-like text and `FZSJ-SGLDXMHJW` for Chinese handwriting style.
+- Fonts are loaded via `@font-face` from the local `liquid/` folder.
+- On case-sensitive file systems, ensure font filename case matches CSS references.
 
-### 2. Edit the Compiled Theme Files
+## Troubleshooting
 
-After installing the theme, edit `liquid.css`, `liquid-dark.css`, `liquid-ink.css`, or `liquid-ink-dark.css` directly in your theme folder. Keep the `liquid/` font folder next to the CSS files so the `@font-face` declarations continue to resolve.
-
-### 3. Edit the Source Modules
-
-For deeper changes, edit the module files under `src/liquid/` and rebuild with `CombineCSS.py`. Typical adjustments include:
-
-- Colors: `color-light.css` and `color-dark.css`
-- Fonts: `font.css` and `font-ink.css`
-- Code blocks: `CodeMirror.css` and `CodeMirror-dark.css`
-- Ink/dark tweaks: `custom-ink.css` and `custom-dark.css`
-- Layout and typography: `main.css`
-
-## Font Notes
-
-Ink modes rely on `Inkfree` for Latin handwriting and `FZSJ-SGLDXMHJW` for Chinese handwriting. The fonts are bundled and loaded via `@font-face`, so system-wide installation is usually unnecessary. On case-sensitive file systems, ensure the filenames in `liquid/` match the CSS references (`inkfree.ttf` and `FZSJ-SGLDXMHJW.ttf`), or rename the files/update the CSS to match.
+- Theme not listed: verify all four `liquid*.css` files are in the theme folder root.
+- Font not applied: verify `liquid/` folder is copied beside the CSS files.
+- Styles not changing: disable custom CSS temporarily to rule out selector conflicts.

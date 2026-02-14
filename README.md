@@ -28,80 +28,64 @@ typora-copy-images-to: ../../media/theme/Liquid
 
 [English](https://github.com/ruiyangzhou01/Liquid/blob/main/README.md) • [中文](https://github.com/ruiyangzhou01/Liquid/blob/main/README_zh.md) • [Deutsch](https://github.com/ruiyangzhou01/Liquid/blob/main/README_de.md) • [Español](https://github.com/ruiyangzhou01/Liquid/blob/main/README_es.md) • [Français](https://github.com/ruiyangzhou01/Liquid/blob/main/README_fr.md) • [日本語](https://github.com/ruiyangzhou01/Liquid/blob/main/README_ja.md)
 
-Liquid is a Typora theme inspired by [Microsoft Fluent Design](https://www.microsoft.com/design/fluent/#/) and the [Purple Theme](https://github.com/hliu202/typora-purple-theme). It delivers a Windows 11-style reading and writing experience with gradients, mica-like surfaces, rounded rectangles, and bundled fonts. The theme ships four variants built from modular CSS.
+Liquid is a Typora theme inspired by [Microsoft Fluent Design](https://www.microsoft.com/design/fluent/#/) and the [Purple Theme](https://github.com/hliu202/typora-purple-theme). The current repository ships source-ready theme files under `src/` (no separate `dist/` build output).
+
+## Current status
+
+- Maintained theme with four variants: `liquid`, `liquid-dark`, `liquid-ink`, `liquid-ink-dark`
+- Source CSS and bundled fonts are versioned directly in this repository
+- Documentation and translations are aligned with the current source layout
 
 ## Features
 
-- Fluent Design styling with gradients, mica, rounded rectangles, and colorful indicators
-- Four variants: Light, Dark, Ink, and Ink Dark
-- Customized CodeMirror styles for code blocks
-- Bundled serif, handwriting, and monospace fonts
+- Fluent-style visuals: gradients, rounded corners, accent indicators, and mica-inspired surfaces
+- Light / Dark / Ink / Ink Dark variants
+- Customized CodeMirror styling for code blocks
+- Bundled fonts for serif text, monospaced code, and handwriting-like Ink modes
 
-## Compatibility
+## Repository layout
 
-- Windows 10 and Windows 11
-- Typora desktop app
-- Language coverage: English and Chinese (Source Han Serif CN). Ink modes also use Ink Free and FZSJ-SGLDXMHJW for handwriting.
-
-## Screenshots
-
-Liquid Theme aims to provide a modern Windows 11 visual experience in Typora. It uses UI elements such as gradients, mica material, and rounded rectangles. The theme supports English and Chinese, and it provides Light Mode, Dark Mode, Ink Mode, and Ink Dark Mode.
-
-![preview](./media/theme/liquid/preview.png)
-
-### Light Mode
-
-![light-preview1](/media/theme/liquid/light-preview1.png)
-
-![light-preview2](/media/theme/liquid/light-preview2.png)
-
-![light-preview3](/media/theme/liquid/light-preview3.png)
-
-### Dark Mode
-
-![dark-preview1](/media/theme/liquid/dark-preview1.png)
-
-![dark-preview2](/media/theme/liquid/dark-preview2.png)
-
-![dark-preview3](/media/theme/liquid/dark-preview3.png)
-
-### Ink Mode & Ink Dark Mode
-
-If you use a 2-in-1 PC such as Microsoft Surface for study or writing, or you simply prefer handwritten fonts, Ink Mode provides a handwriting-style reading and writing experience in Typora.
-
-![ink-preview1](/media/theme/liquid/ink-preview1.png)
-
-![ink-preview2](/media/theme/liquid/ink-preview2.png)
-
-![ink-preview3](/media/theme/liquid/ink-preview3.png)
+```text
+src/
+  liquid.css
+  liquid-dark.css
+  liquid-ink.css
+  liquid-ink-dark.css
+  liquid/
+    *.css
+    *.ttf
+    *.woff2
+Demo.md
+README*.md
+doc/Document*.md
+media/
+assets/
+```
 
 ## Installation
 
-1. Download `liquid.zip` from the [Releases](https://github.com/ruiyangzhou01/Liquid/releases) page.
-2. Open Typora settings. In **Preferences**, select **Appearance**, then click **Open Theme Folder**.
-3. Unzip and copy `liquid.css`, `liquid-dark.css`, `liquid-ink.css`, `liquid-ink-dark.css`, and the `liquid/` font folder into the theme folder.
-4. Restart Typora.
-5. Select the Liquid theme from the **Themes** menu in Typora.
-6. Open `Demo.md` from this repository (or the source code archive) to preview the local rendering.
-
-### Ink mode fonts
-
-Liquid bundles the Ink fonts and loads them via `@font-face`, so you usually do not need to install them system-wide. On case-sensitive file systems, make sure the font filenames in `liquid/` match the CSS references (`inkfree.ttf` and `FZSJ-SGLDXMHJW.ttf`); rename the files or update the CSS if needed. `FZSJ-SGLDXMHJW` renders Chinese characters in Ink modes, and `Inkfree` provides the handwriting font for Latin text.
-
-## Build from source
-
-The build scripts are written for Windows paths.
-
-1. Install Python 3.
-2. Run `cd src/Deploy`.
-3. Run `python CombineCSS.py` to combine `src/liquid*.css` into `dist/*.css`.
-4. (Optional) Run `cd ../deploy` and `python CompressZip.py` to package `dist` as `liquid.zip`.
+1. Download `liquid.zip` from [Releases](https://github.com/ruiyangzhou01/Liquid/releases) or clone this repository.
+2. Open Typora → **Preferences** → **Appearance** → **Open Theme Folder**.
+3. Copy these files into the Typora theme folder:
+   - `src/liquid.css`
+   - `src/liquid-dark.css`
+   - `src/liquid-ink.css`
+   - `src/liquid-ink-dark.css`
+   - `src/liquid/` (entire folder)
+4. Restart Typora and select a Liquid variant from **Themes**.
+5. Open `Demo.md` to preview the theme.
 
 ## Customization
 
-- Add custom CSS via Typora (recommended): <https://support.typora.io/Add-Custom-CSS/>.
-- Edit the compiled files in the theme folder (`dist/*.css` in this repository).
-- For deeper changes, edit the modules in `src/liquid/` and rebuild. See the documentation below.
+- Quick tweaks: edit installed `liquid*.css` files directly in your Typora theme folder.
+- Deep customization: edit module files in `src/liquid/` (`main.css`, `color-*.css`, `font*.css`, `CodeMirror*.css`, `custom-*.css`).
+- Add your own override stylesheet using Typora custom CSS: <https://support.typora.io/Add-Custom-CSS/>.
+
+## Troubleshooting
+
+- **Theme not visible in Typora**: confirm all four `liquid*.css` files are copied into the theme folder root.
+- **Fonts or Ink style missing**: confirm the `liquid/` folder is copied next to the CSS files.
+- **Glyph issues on case-sensitive systems**: verify filename case matches CSS references (for example `Inkfree.ttf` and `FZSJ-SGLDXMHJW.TTF`).
 
 ## Documentation
 
