@@ -5,31 +5,21 @@
 > A comprehensive Typora feature showcase in six languages:
 > **English • 中文 • Deutsch • Español • Français • 日本語**
 
----
+## 1. Introduction
 
-## 1. Introduction / 介绍 / Einführung / Introducción / Introduction / はじめに
+English: This document demonstrates common and advanced Markdown features rendered by Typora with the Liquid theme.
 
-### English
-This document demonstrates common and advanced Markdown features rendered by Typora with the Liquid theme.
+中文：本文档用于演示 Typora 在 Liquid 主题下对常见与高级 Markdown 功能的渲染效果。
 
-### 中文
-本文档用于演示 Typora 在 Liquid 主题下对常见与高级 Markdown 功能的渲染效果。
+Deutsch: Dieses Dokument zeigt gängige und erweiterte Markdown-Funktionen, wie sie in Typora mit dem Liquid-Theme dargestellt werden.
 
-### Deutsch
-Dieses Dokument zeigt gängige und erweiterte Markdown-Funktionen, wie sie in Typora mit dem Liquid-Theme dargestellt werden.
+Español: Este documento muestra funciones comunes y avanzadas de Markdown renderizadas por Typora con el tema Liquid.
 
-### Español
-Este documento muestra funciones comunes y avanzadas de Markdown renderizadas por Typora con el tema Liquid.
+Français : Ce document présente les fonctionnalités Markdown courantes et avancées, rendues dans Typora avec le thème Liquid.
 
-### Français
-Ce document présente les fonctionnalités Markdown courantes et avancées, rendues dans Typora avec le thème Liquid.
+日本語：このドキュメントは、Liquid テーマを適用した Typora で表示される、一般的および高度な Markdown 機能を紹介します。
 
-### 日本語
-このドキュメントは、Liquid テーマを適用した Typora で表示される、一般的および高度な Markdown 機能を紹介します。
-
----
-
-## 2. Typography / 排版 / Typografie / Tipografía / Typographie / タイポグラフィ
+## 2. Typography
 
 ### Emphasis
 
@@ -48,7 +38,7 @@ Use <abbr title="Application Programming Interface">API</abbr> keys like <kbd>Ct
 
 ---
 
-## 3. Quotes / 引用 / Zitate / Citas / Citations / 引用
+## 3. Quotes
 
 > “Design is intelligence made visible.”
 >
@@ -59,9 +49,7 @@ Use <abbr title="Application Programming Interface">API</abbr> keys like <kbd>Ct
 > - Français : Gardez l’interface lisible.
 > - 日本語：読みやすいインターフェースを保ちましょう。
 
----
-
-## 4. Lists / 列表 / Listen / Listas / Listes / リスト
+## 4. Lists
 
 ### Task list
 
@@ -88,9 +76,7 @@ Use <abbr title="Application Programming Interface">API</abbr> keys like <kbd>Ct
   - Français
   - 日本語
 
----
-
-## 5. Links and Footnotes / 链接与脚注 / Links und Fußnoten / Enlaces y notas / Liens et notes / リンクと脚注
+## 5. Links and Footnotes
 
 - Project homepage: [Liquid Theme](https://github.com/ruiyangzhou01/Liquid)
 - Latest release: [Releases](https://github.com/ruiyangzhou01/Liquid/releases)
@@ -99,9 +85,7 @@ This sentence includes a footnote.[^demo-note]
 
 [^demo-note]: Typora can render inline references and footnotes elegantly.
 
----
-
-## 6. Tables / 表格 / Tabellen / Tablas / Tableaux / 表
+## 6. Tables
 
 | Language | Greeting | Sample sentence |
 | :-- | :--: | --: |
@@ -112,9 +96,7 @@ This sentence includes a footnote.[^demo-note]
 | Français | Bonjour | Portez ce vieux whisky au juge blond qui fume. |
 | 日本語 | こんにちは | いろはにほへと ちりぬるを。 |
 
----
-
-## 7. Code / 代码 / Code / Código / Code / コード
+## 7. Code
 
 ### Inline code
 
@@ -148,9 +130,7 @@ console.log(languages.join(" • "));
 </section>
 ```
 
----
-
-## 8. Math / 数学 / Mathematik / Matemáticas / Mathématiques / 数式
+## 8. Math
 
 Enable **Markdown Extended Syntax** in Typora settings for best rendering.
 
@@ -172,9 +152,7 @@ Chemistry notation: H~2~O and CO~2~.
 
 Superscript examples: E=mc^2^.
 
----
-
-## 9. Diagrams / 图表 / Diagramme / Diagramas / Diagrammes / 図
+## 9. Diagrams
 
 ### Mermaid flowchart
 
@@ -197,59 +175,24 @@ sequenceDiagram
     L-->>U: Render beautiful markdown
 ```
 
----
-
-## 10. Media / 媒体 / Medien / Medios / Médias / メディア
-
-### Image
-
-![Liquid Logo](https://raw.githubusercontent.com/ruiyangzhou01/Liquid/main/assets/logo.png)
-
-### Block emoji and symbols
-
-- ✅ Success
-- ⚠️ Warning
-- ❌ Error
-- 💧 Liquid
-
----
-
-## 11. Advanced blocks / 高级块 / Erweiterte Blöcke / Bloques avanzados / Blocs avancés / 高度なブロック
-
-### Collapsible details (HTML)
-
-<details>
-<summary>Click to expand / 点击展开 / Zum Aufklappen klicken / Haz clic para expandir / Cliquez pour ouvrir / クリックして展開</summary>
-
-- English: Hidden notes can improve readability.
-- 中文：隐藏内容可以提升文档可读性。
-- Deutsch: Versteckte Inhalte verbessern die Lesbarkeit.
-- Español: El contenido oculto mejora la legibilidad.
-- Français : Le contenu masqué améliore la lisibilité.
-- 日本語：折りたたみ要素は可読性を高めます。
-
-</details>
-
 ### Definition-style list (simulated)
 
 - **Liquid Theme**: A clean and modern Typora theme.
 - **Typora**: A live preview Markdown editor.
 - **Markdown**: Lightweight markup language.
 
----
+## 12. Final checklist
 
-## 12. Final checklist / 最终检查 / Abschlusscheck / Lista final / Vérification finale / 最終チェック
-
-- [x] Headings
+- [ ] Headings
 - [x] Text emphasis
-- [x] Quotes
+- [ ] Quotes
 - [x] Lists
-- [x] Links and footnotes
+- [ ] Links and footnotes
 - [x] Tables
-- [x] Code blocks
+- [ ] Code blocks
 - [x] Math formulas
-- [x] Mermaid diagrams
+- [ ] Mermaid diagrams
 - [x] Image and emoji
-- [x] Multilingual content (EN / 中文 / DE / ES / FR / JA)
+- [ ] Multilingual content (EN / 中文 / DE / ES / FR / JA)
 
 > If everything above renders nicely, your Liquid theme setup is working great.
