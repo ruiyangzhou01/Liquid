@@ -153,6 +153,13 @@ a {
     text-decoration: none;
 }
 
+#write a:has(img) {
+    background: none;
+    background-clip: border-box;
+    -webkit-background-clip: border-box;
+    color: var(--link-color);
+}
+
 .md-content {
     color: var(--light-text-color);
 }
