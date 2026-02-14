@@ -343,10 +343,6 @@ img[alt|="shadow"] {
     font-size: 1rem;
 }
 
-.md-toc-h1 {
-    display: none;
-}
-
 #write .md-toc-h2 .md-toc-inner {
     font-size: 1.2rem;
 }
