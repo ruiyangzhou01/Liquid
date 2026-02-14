@@ -1,113 +1,198 @@
-# Demo for Liquid Theme
+# Liquid Theme · Typora Complete Demo
 
 [TOC]
 
-## Preface
+> A comprehensive Typora feature showcase in six languages:
+> **English • 中文 • Deutsch • Español • Français • 日本語**
 
-Open this demo with Typora in your local PC after you install Liquid Theme to check the render effect.
+## 1. Introduction
 
-## Text
+English: This document demonstrates common and advanced Markdown features rendered by Typora with the Liquid theme.
 
-### Highlight
+中文：本文档用于演示 Typora 在 Liquid 主题下对常见与高级 Markdown 功能的渲染效果。
 
-==This is a context in highlight.==
+Deutsch: Dieses Dokument zeigt gängige und erweiterte Markdown-Funktionen, wie sie in Typora mit dem Liquid-Theme dargestellt werden.
 
-==这是一段高亮的文字。==
+Español: Este documento muestra funciones comunes y avanzadas de Markdown renderizadas por Typora con el tema Liquid.
 
-### Bold
+Français : Ce document présente les fonctionnalités Markdown courantes et avancées, rendues dans Typora avec le thème Liquid.
 
-**This is a context in Bold.**
+日本語：このドキュメントは、Liquid テーマを適用した Typora で表示される、一般的および高度な Markdown 機能を紹介します。
 
-**这是一段加粗的文字。**
+## 2. Typography
 
-### Italics
+### Emphasis
 
-*This is a context in italics.*
+- **Bold / 粗体 / Fett / Negrita / Gras / 太字**
+- *Italic / 斜体 / Kursiv / Cursiva / Italique / 斜体*
+- ***Bold + Italic / 粗斜体 / Fett + Kursiv / Negrita + Cursiva / Gras + Italique / 太字+斜体***
+- ==Highlight / 高亮 / Hervorhebung / Resaltado / Surlignage / ハイライト==
+- ~~Strikethrough / 删除线 / Durchgestrichen / Tachado / Barré / 取り消し線~~
+- <u>Underline / 下划线 / Unterstrichen / Subrayado / Souligné / 下線</u>
 
-*这是一段倾斜的文字。*
+### Abbreviation and keyboard style
 
-### Underline
+Use <abbr title="Application Programming Interface">API</abbr> keys like <kbd>Ctrl</kbd> + <kbd>S</kbd> to save.
 
-<u>This is a context in Underline.</u>
+### Horizontal rule
 
-<u>这是一段加有下划线的文字。</u>
+---
 
-### Strikethrough
+## 3. Quotes
 
-~~This is a context in Underline.~~
-
-~~这是一段加有删除线的文字。~~
-
-### Hyperlink
-
-[Homepage](https://github.com/ruiyangzhou01/Liquid)
-
-[Download](https://github.com/ruiyangzhou01/Liquid/releases)
-
-### Quote
-
-> This is a Quote.
+> “Design is intelligence made visible.”
 >
-> This is a Quote, too.
+> - English: Keep interfaces readable.
+> - 中文：保持界面清晰易读。
+> - Deutsch: Halte Oberflächen gut lesbar.
+> - Español: Mantén la interfaz legible.
+> - Français : Gardez l’interface lisible.
+> - 日本語：読みやすいインターフェースを保ちましょう。
 
-## Code
+## 4. Lists
 
-### Code Block
+### Task list
 
-```html
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Hello, World!</title>
-    </head>
-    <body>
-        <p>This is an example of a simple HTML page with one paragraph.</p>
-    </body>
-</html>
+- [x] Install Liquid theme
+- [x] Open this file in Typora
+- [ ] Customize fonts and spacing
+
+### Ordered list
+
+1. Start Typora.
+2. Select **Theme → Liquid**.
+3. Compare each language section.
+
+### Nested unordered list
+
+- Fruits
+  - Apple
+  - Orange
+- Languages
+  - English
+  - 中文
+  - Deutsch
+  - Español
+  - Français
+  - 日本語
+
+## 5. Links and Footnotes
+
+- Project homepage: [Liquid Theme](https://github.com/ruiyangzhou01/Liquid)
+- Latest release: [Releases](https://github.com/ruiyangzhou01/Liquid/releases)
+
+This sentence includes a footnote.[^demo-note]
+
+[^demo-note]: Typora can render inline references and footnotes elegantly.
+
+## 6. Tables
+
+| Language | Greeting | Sample sentence |
+| :-- | :--: | --: |
+| English | Hello | The quick brown fox jumps over the lazy dog. |
+| 中文 | 你好 | 快速的棕色狐狸跳过了那只懒狗。 |
+| Deutsch | Hallo | Franz jagt im komplett verwahrlosten Taxi quer durch Bayern. |
+| Español | Hola | El veloz murciélago hindú comía feliz cardillo y kiwi. |
+| Français | Bonjour | Portez ce vieux whisky au juge blond qui fume. |
+| 日本語 | こんにちは | いろはにほへと ちりぬるを。 |
+
+## 7. Code
+
+### Inline code
+
+Use `git status` before `git commit`.
+
+### Fenced blocks (multiple languages)
+
+```bash
+# Shell
+npm install
+npm run dev
 ```
 
-### Inline Code
+```python
+# Python
+def greet(name: str) -> str:
+    return f"Hello, {name}!"
+```
 
-This is `print("the inline code")`.
+```javascript
+// JavaScript
+const languages = ["English", "中文", "Deutsch", "Español", "Français", "日本語"];
+console.log(languages.join(" • "));
+```
 
-## List and Table
+```html
+<!-- HTML -->
+<section class="hero">
+  <h1>Liquid Typora Demo</h1>
+  <p>Elegant markdown rendering.</p>
+</section>
+```
 
-### Task List
+## 8. Math
 
-- [ ] Undo
-- [x] Done
+Enable **Markdown Extended Syntax** in Typora settings for best rendering.
 
-### Ordered List
-
-1. First
-2. Second
-
-### Unordered List
-
-- Hello, world!
-- Hello, world!
-
-### Table
-
-| Matrix |  1   |  2   |  3   |
-| :----: | :--: | :--: | :--: |
-|   1    |  11  |  12  |  13  |
-|   2    |  21  |  22  |  23  |
-|   3    |  31  |  32  |  33  |
-
-## Math
-
-Only when you enable `markdown extended syntax` in the setting of Typora, you can see the rendering of this module.
-
-### Formula Block
+### Block formula
 
 $$
-a x^2 + b x + c = 0
+\Delta = b^2 - 4ac
 $$
 
-### Inline Formula
+$$
+\int_0^{2\pi} \sin(x)\,dx = 0
+$$
 
-Line: $y=ax+b$.
+### Inline formula
 
-CO~2~ is a kind of gas in the air.
+Quadratic roots: $x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$.
 
+Chemistry notation: H~2~O and CO~2~.
+
+Superscript examples: E=mc^2^.
+
+## 9. Diagrams
+
+### Mermaid flowchart
+
+```mermaid
+flowchart LR
+    A[Write Markdown] --> B[Open in Typora]
+    B --> C[Apply Liquid Theme]
+    C --> D[Review multilingual rendering]
+```
+
+### Mermaid sequence
+
+```mermaid
+sequenceDiagram
+    participant U as User
+    participant T as Typora
+    participant L as Liquid Theme
+    U->>T: Open demo.md
+    T->>L: Apply style rules
+    L-->>U: Render beautiful markdown
+```
+
+### Definition-style list (simulated)
+
+- **Liquid Theme**: A clean and modern Typora theme.
+- **Typora**: A live preview Markdown editor.
+- **Markdown**: Lightweight markup language.
+
+## 12. Final checklist
+
+- [ ] Headings
+- [x] Text emphasis
+- [ ] Quotes
+- [x] Lists
+- [ ] Links and footnotes
+- [x] Tables
+- [ ] Code blocks
+- [x] Math formulas
+- [ ] Mermaid diagrams
+- [x] Image and emoji
+- [ ] Multilingual content (EN / 中文 / DE / ES / FR / JA)
+
+> If everything above renders nicely, your Liquid theme setup is working great.
