@@ -39,19 +39,18 @@ html {
     font-family: var(--base-font);
     /* max-width: 914px; */
     margin: 0 auto;
-    padding: 1rem 4rem;
-    padding-bottom: 100px;
+    padding: 1.25rem 4.5rem 110px;
 }
 
 #write p {
-    line-height: 1.6rem;
-    word-spacing: 0.05rem;
+    line-height: 1.75rem;
+    word-spacing: 0.02rem;
 }
 
 body {
     color: var(--text-color);
     -webkit-font-smoothing: antialiased;
-    line-height: 1.6rem;
+    line-height: 1.75rem;
     letter-spacing: 0;
     overflow-x: hidden;
 }
@@ -74,10 +73,10 @@ h4,
 h5,
 h6 {
     position: relative;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 1.15rem;
+    margin-bottom: 0.8rem;
     font-weight: normal;
-    line-height: 1.5;
+    line-height: 1.4;
     cursor: text;
     color: var(--title-color);
     font-family: var(--title-font);
@@ -89,7 +88,7 @@ h6 {
 #write h4,
 #write h5,
 #write h6 {
-    background: linear-gradient(to bottom, #43CBFF, #9708CC);
+    background: linear-gradient(160deg, var(--title-gradient-start), var(--title-gradient-end));
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -99,39 +98,39 @@ h6 {
 h1 {
     text-align: center;
     font-size: 1.8em;
-    margin-bottom: 2rem;
+    margin-bottom: 1.9rem;
 }
 
 h1:after {
     content: "";
     display: block;
-    margin: 0.2em auto 0;
-    width: 6rem;
-    height: 2.4px;
-    border-bottom: 2px solid var(--title-color);
+    margin: 0.35em auto 0;
+    width: 5rem;
+    height: 2px;
+    border-bottom: 2px solid var(--soft-title-line);
 }
 
 h2 {
-    padding-left: 0.4em;
-    font-size: 1.6em;
-    border-left: 0.4em solid var(--title-color);
-    border-bottom: 1px solid var(--title-color);
+    padding-left: 0.5em;
+    font-size: 1.55em;
+    border-left: 0.34em solid var(--title-color);
+    border-bottom: 1px solid var(--subtle-title-line);
 }
 
 h3 {
-    font-size: 1.6em;
+    font-size: 1.42em;
 }
 
 h4 {
-    font-size: 1.4em;
+    font-size: 1.26em;
 }
 
 h5 {
-    font-size: 1.2em;
+    font-size: 1.12em;
 }
 
 h6 {
-    font-size: 1.0em;
+    font-size: 1em;
 }
 
 
@@ -144,7 +143,7 @@ a {
 
 #write a {
     border-bottom: none;
-    background: linear-gradient(to bottom, #3C8CE7, #00EAFF);
+    background: linear-gradient(160deg, var(--link-gradient-start), var(--link-gradient-end));
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -167,12 +166,12 @@ ul,
 ol,
 dl,
 table {
-    margin: 0.8em 0;
+    margin: 0.95em 0;
 }
 
 /* horizontal rule */
 hr {
-    margin: 1em auto;
+    margin: 1.25em auto;
     border: 0;
     border-top: 1px solid var(--border);
 }
@@ -189,7 +188,7 @@ li p.first {
 
 ul,
 ol {
-    padding-left: 2rem;
+    padding-left: 2.15rem;
 }
 
 ul:first-child,
@@ -210,15 +209,15 @@ ul li {
 
 /* 表格 */
 table {
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.4rem;
 }
 
 table th,
 table td {
-    padding: 8px;
-    line-height: 1.25rem;
+    padding: 10px 12px;
+    line-height: 1.35rem;
     vertical-align: middle;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border);
 }
 
 table th {
@@ -237,8 +236,8 @@ thead {
 
 /* 引用 */
 blockquote {
-    border-left: 0.2em solid var(--blue);
-    padding-left: 1em;
+    border-left: 0.22em solid var(--blue);
+    padding: 0.2em 0 0.2em 1em;
     color: var(--light-text-color);
     font-family: var(--base-font);
 }
@@ -251,10 +250,10 @@ code,
 tt,
 mark {
     padding: 0 4px;
-    border-radius: 8px 8px 8px 8px;
+    border-radius: 8px;
     margin: 0 2px;
     color: var(--text-color);
-    background-color: var(--Mica);
+    background-color: var(--inline-surface);
 }
 
 /* 粗体 */
@@ -279,14 +278,14 @@ tt {
 
 #write .md-footnote {
     color: var(--code-color);
-    background-color: #f4f2f9;
+    background-color: var(--meta-surface);
 }
 
 /* 高亮 */
 /* highlight */
 #write mark {
-    background-color: #FDEEBB;
-    color: #e9781e;
+    background-color: #f8e7ad;
+    color: #b9671d;
 }
 
 #write del {
@@ -301,9 +300,9 @@ tt {
     padding: 1rem;
     font-size: 85%;
     line-height: 1.45;
-    background-color: var(--Mica);
-    border: 0;
-    border-radius: 20px 20px 20px 20px;
+    background-color: var(--surface-color);
+    border: 1px solid var(--surface-border);
+    border-radius: 16px;
     color: #777777;
     margin-top: 0 !important;
 }
@@ -315,7 +314,7 @@ tt {
 /* 图片 */
 /* imag */
 .md-image > .md-meta {
-    border-radius: 20px 20px 20px 20px;
+    border-radius: 16px;
     font-family: var(--monospace);
     padding: 2px 0 0 4px;
     font-size: 0.9em;
@@ -337,14 +336,15 @@ img[alt|="shadow"] {
 /* 目录 */
 /* TOC */
 #write .md-toc {
-    background-color: var(--Mica);
-    border-radius: 20px 20px 20px 20px;
-    padding: 2px 4px;
-    margin: 0 2px;
+    background-color: var(--surface-color);
+    border: 1px solid var(--surface-border);
+    border-radius: 16px;
+    padding: 6px 10px;
+    margin: 0.2rem 0.1rem;
 }
 
 #write a.md-toc-inner {
-    line-height: 1.5;
+    line-height: 1.4;
     white-space: pre-line;
     border-bottom: none;
     font-size: 1rem;
@@ -403,8 +403,8 @@ pre {
 
 /* border and bg */
 .md-fences {
-    border-radius: 20px 20px 20px 20px;
-    background: var(--Mica);
+    border-radius: 16px;
+    background: var(--surface-color);
     backdrop-filter: blur(15px);
 }
 
@@ -418,9 +418,10 @@ pre {
 /* language tip */
 #write .code-tooltip {
     border: 1px solid var(--border);
-    border-radius: 24px 24px 24px 24px;
-    padding: 8px 12px 8px 12px;
-    margin: 8px 12px 8px 12px;
+    border-radius: 16px;
+    background: var(--surface-elevated);
+    padding: 6px 10px;
+    margin: 8px 10px;
 }
 
 
@@ -438,9 +439,9 @@ pre {
     -webkit-appearance: initial;
     display: block;
     position: absolute;
-    border: 1px solid #b4b4b4;
-    border-radius: 20px 20px 20px 20px;
-    margin-top: 0.3rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    margin-top: 0.28rem;
     height: 1rem;
     width: 1rem;
     transition: background 0.3s;
@@ -453,7 +454,7 @@ pre {
 }
 
 #write .md-task-list-item > input:hover {
-    background: #ddd;
+    background: var(--control-hover);
 }
 
 #write .md-task-list-item > input[checked]::before {
@@ -483,7 +484,7 @@ pre {
 }
 
 #write .md-task-list-item.task-list-done > p {
-    color: #b4b4b4;
+    color: var(--light-text-color);
     text-decoration: line-through;
 }
 
@@ -500,7 +501,7 @@ pre {
 /* sidebar */
 #typora-sidebar,
 .typora-node #typora-sidebar {
-    box-shadow: 3px 0px 10px var(--shadow-color);
+    box-shadow: 4px 0 24px var(--shadow-color);
     color: var(--text-color);
 }
 
@@ -510,12 +511,12 @@ pre {
 
 /* 选中的文字 */
 ::selection {
-    background: #ccc;
+    background: var(--selection-bg);
     color: var(--blue);
 }
 
 ::-moz-selection {
-    background: #ccc;
+    background: var(--selection-bg);
     color: var(--blue);
 }
 

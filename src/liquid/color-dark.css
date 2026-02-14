@@ -2,21 +2,35 @@
 /* dark */
 :root {
     --title-color: #6f79ff;
-    --text-color: #F5F5F5;
-    --light-text-color: #666666;
-    --link-color: #55d3e4;
-    --code-color: #937fce;
+    --text-color: #f2f3f8;
+    --light-text-color: #b4bccf;
+    --link-color: #7cb4ff;
+    --code-color: #b5a0ff;
+    --title-gradient-start: #67dbff;
+    --title-gradient-end: #ad7bff;
+    --link-gradient-start: #76b8ff;
+    --link-gradient-end: #71e5ff;
+    --surface-color: #2a3040;
+    --surface-elevated: #323a4d;
+    --selection-bg: #5a6078;
+    --soft-title-line: rgba(145, 152, 255, 0.65);
+    --subtle-title-line: rgba(145, 152, 255, 0.42);
+    --inline-surface: #3a4153;
+    --meta-surface: #31394a;
+    --surface-border: rgba(112, 124, 150, 0.45);
+    --control-hover: #4a5268;
 
-    --shadow-color: rgba(128, 107, 192, 0.1);
+
+    --shadow-color: rgba(13, 18, 33, 0.45);
     --blue: #559CE4;
-    --Mica: #323232;
-    --border: rgb(179, 179, 179);
-    --shadow: 0.4rem 0.8rem 1.6rem var(--shadow-color);
+    --Mica: #2b3241;
+    --border: #4a5368;
+    --shadow: 0 12px 32px var(--shadow-color);
 
-    --table-background-color: var(--Mica);
+    --table-background-color: #2f3748;
 
     --window-border: 1px solid #555;
-    --bg-color: #232736;
+    --bg-color: #222838;
     --rawblock-edit-panel-bd: #333;
     --search-select-bg-color: #428bca;
 
@@ -35,7 +49,7 @@
 
 
 body {
-    background: #232736;
+    background: var(--bg-color);
 }
 
 header,
@@ -43,6 +57,6 @@ header,
 .megamenu-content,
 footer {
     color: var(--text-color);
-    background: #232736;
+    background: var(--bg-color);
 }
 

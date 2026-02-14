@@ -2,23 +2,37 @@
 /* light */
 :root {
     --title-color: #6f79ff;
-    --text-color: #353535;
-    --light-text-color: #666666;
-    --link-color: #55d3e4;
-    --code-color: #937fce;
+    --text-color: #2f3136;
+    --light-text-color: #5f646f;
+    --link-color: #3b8eea;
+    --code-color: #785ec8;
+    --title-gradient-start: #43cbff;
+    --title-gradient-end: #8c47db;
+    --link-gradient-start: #3c8ce7;
+    --link-gradient-end: #0bc7f0;
+    --surface-color: #f8f8fa;
+    --surface-elevated: #ffffff;
+    --selection-bg: #d8dbe6;
+    --soft-title-line: rgba(111, 121, 255, 0.55);
+    --subtle-title-line: rgba(111, 121, 255, 0.32);
+    --inline-surface: #f6f3fb;
+    --meta-surface: #f5f5f8;
+    --surface-border: rgba(155, 161, 180, 0.4);
+    --control-hover: #dde1ea;
 
-    --shadow-color: rgba(128, 107, 192, 0.1);
+
+    --shadow-color: rgba(73, 90, 149, 0.12);
     --blue: #559CE4;
     --Mica: #f3f3f3;
-    --border: rgb(179, 179, 179);
-    --shadow: 0.4rem 0.8rem 1.6rem var(--shadow-color);
+    --border: #d6d9e0;
+    --shadow: 0 10px 30px var(--shadow-color);
 
-    --table-background-color: #fcfcfc;
+    --table-background-color: #f7f8fb;
 
     --side-bar-bg-color: var(--Mica);
-    --control-text-color: var(var(--light-text-color));
+    --control-text-color: var(--light-text-color);
     --active-file-text-color: var(--title-color);
     --active-file-bg-color: var(--shadow-color);
     --item-hover-bg-color: var(--shadow-color);
-    --active-file-border-color: var(var(--title-color));
+    --active-file-border-color: var(--title-color);
 }
