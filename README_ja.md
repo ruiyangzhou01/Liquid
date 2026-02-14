@@ -28,80 +28,64 @@ typora-copy-images-to: ../../media/theme/Liquid
 
 [English](https://github.com/ruiyangzhou01/Liquid/blob/main/README.md) • [中文](https://github.com/ruiyangzhou01/Liquid/blob/main/README_zh.md) • [Deutsch](https://github.com/ruiyangzhou01/Liquid/blob/main/README_de.md) • [Español](https://github.com/ruiyangzhou01/Liquid/blob/main/README_es.md) • [Français](https://github.com/ruiyangzhou01/Liquid/blob/main/README_fr.md) • [日本語](https://github.com/ruiyangzhou01/Liquid/blob/main/README_ja.md)
 
-Liquid は [Microsoft Fluent Design](https://www.microsoft.com/design/fluent/#/) と [Purple Theme](https://github.com/hliu202/typora-purple-theme) に着想を得た Typora テーマです。グラデーション、ミカ調の質感、角丸の形状、同梱フォントによって Windows 11 風の読書・執筆体験を提供します。テーマはモジュール化された CSS を基に 4 種類のバリエーションを用意しています。
+Liquid は [Microsoft Fluent Design](https://www.microsoft.com/design/fluent/#/) と [Purple Theme](https://github.com/hliu202/typora-purple-theme) に着想を得た Typora テーマです。現在のリポジトリでは、`src/` に実運用可能なテーマファイルを直接配置しています（`dist/` の別ビルド成果物はありません）。
 
-## 機能
+## 現在の状態
 
-- グラデーション、ミカ、角丸、カラフルなインジケーターによる Fluent Design 風スタイル
-- 4 つのバリエーション：Light、Dark、Ink、Ink Dark
-- コードブロック向けの CodeMirror カスタムスタイル
-- セリフ体、手書き体、等幅フォントを同梱
+- 継続メンテナンス中、4 バリアントを提供：`liquid` / `liquid-dark` / `liquid-ink` / `liquid-ink-dark`
+- ソース CSS とフォントをリポジトリに同梱
+- ドキュメントと翻訳を現行構成に合わせて更新
 
-## 対応環境
+## 特徴
 
-- Windows 10 / Windows 11
-- Typora デスクトップアプリ
-- 対応言語：英語・中国語（Source Han Serif CN）。Ink モードでは Ink Free と FZSJ-SGLDXMHJW を手書きフォントとして使用します。
+- Fluent スタイル（グラデーション、角丸、アクセント表示）
+- Light / Dark / Ink / Ink Dark の 4 モード
+- CodeMirror のカスタムスタイル
+- セリフ体・等幅・Ink 手書き向けフォントを同梱
 
-## スクリーンショット
+## リポジトリ構成
 
-Liquid Theme は Typora に Windows 11 のモダンな視覚体験を提供します。グラデーション、ミカ素材、角丸矩形などの UI 要素を活用し、英語と中国語に対応した Light Mode、Dark Mode、Ink Mode、Ink Dark Mode を用意しています。
-
-![preview](/media/theme/liquid/preview.png)
-
-### Light Mode
-
-![light-preview1](/media/theme/liquid/light-preview1.png)
-
-![light-preview2](/media/theme/liquid/light-preview2.png)
-
-![light-preview3](/media/theme/liquid/light-preview3.png)
-
-### Dark Mode
-
-![dark-preview1](/media/theme/liquid/dark-preview1.png)
-
-![dark-preview2](/media/theme/liquid/dark-preview2.png)
-
-![dark-preview3](/media/theme/liquid/dark-preview3.png)
-
-### Ink Mode & Ink Dark Mode
-
-Microsoft Surface のような 2-in-1 PC で学習や執筆を行う場合や、手書きフォントが好きな場合は、Ink Mode が Typora に手書き風の読書・執筆体験を提供します。
-
-![ink-preview1](/media/theme/liquid/ink-preview1.png)
-
-![ink-preview2](/media/theme/liquid/ink-preview2.png)
-
-![ink-preview3](/media/theme/liquid/ink-preview3.png)
+```text
+src/
+  liquid.css
+  liquid-dark.css
+  liquid-ink.css
+  liquid-ink-dark.css
+  liquid/
+    *.css
+    *.ttf
+    *.woff2
+Demo.md
+README*.md
+doc/Document*.md
+media/
+assets/
+```
 
 ## インストール
 
-1. [Releases](https://github.com/ruiyangzhou01/Liquid/releases) から `liquid.zip` をダウンロードします。
+1. [Releases](https://github.com/ruiyangzhou01/Liquid/releases) から `liquid.zip` を取得するか、リポジトリを clone します。
 2. Typora の **Preferences** → **Appearance** → **Open Theme Folder** を開きます。
-3. `liquid.css`、`liquid-dark.css`、`liquid-ink.css`、`liquid-ink-dark.css`、および `liquid/` フォントフォルダをテーマフォルダへ展開・コピーします。
-4. Typora を再起動します。
-5. **Themes** メニューから Liquid を選択します。
-6. このリポジトリ（またはソースコードアーカイブ）の `Demo.md` を開き、表示を確認します。
-
-### Ink モードのフォント
-
-Liquid には Ink 用フォントが同梱され、`@font-face` で読み込まれるため、通常はシステムへのインストールは不要です。大文字小文字を区別する環境では `liquid/` フォルダのファイル名が CSS の参照（`inkfree.ttf` と `FZSJ-SGLDXMHJW.ttf`）と一致するよう確認し、必要に応じてリネームまたは CSS を調整してください。`FZSJ-SGLDXMHJW` は Ink モードの中国語、`Inkfree` はラテン文字の手書き用です。
-
-## ソースからビルド
-
-ビルドスクリプトは Windows のパス表記を前提にしています。
-
-1. Python 3 をインストールします。
-2. `cd src/Deploy` を実行します。
-3. `python CombineCSS.py` を実行し、`src/liquid*.css` を `dist/*.css` に結合します。
-4. （任意）`cd ../deploy` と `python CompressZip.py` を実行して `dist` を `liquid.zip` としてパッケージします。
+3. 以下をテーマフォルダにコピーします：
+   - `src/liquid.css`
+   - `src/liquid-dark.css`
+   - `src/liquid-ink.css`
+   - `src/liquid-ink-dark.css`
+   - `src/liquid/`（フォルダごと）
+4. Typora を再起動し、Liquid テーマを選択します。
+5. `Demo.md` を開いて表示を確認します。
 
 ## カスタマイズ
 
-- Typora のカスタム CSS を使う（推奨）：<https://support.typora.io/Add-Custom-CSS/>。
-- テーマフォルダ内のコンパイル済みファイルを編集する（このリポジトリの `dist/*.css`）。
-- さらに調整する場合は `src/liquid/` のモジュールを編集して再ビルドします。詳細は下記のドキュメントを参照してください。
+- 手早い調整：テーマフォルダ内の `liquid*.css` を直接編集。
+- 詳細調整：`src/liquid/` のモジュール（`main.css`、`color-*.css`、`font*.css`、`CodeMirror*.css`、`custom-*.css`）を編集。
+- Typora カスタム CSS で上書き追加：<https://support.typora.io/Add-Custom-CSS/>。
+
+## トラブルシューティング
+
+- **テーマが表示されない**：4 つの `liquid*.css` がテーマフォルダ直下にあるか確認。
+- **Ink フォントが反映されない**：`liquid/` フォルダが CSS と同じ場所にあるか確認。
+- **大文字小文字区別環境で文字欠け**：CSS 参照名（`Inkfree.ttf`、`FZSJ-SGLDXMHJW.TTF`）とファイル名を一致させてください。
 
 ## ドキュメント
 

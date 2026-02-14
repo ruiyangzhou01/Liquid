@@ -28,80 +28,64 @@ typora-copy-images-to: ../../media/theme/Liquid
 
 [English](https://github.com/ruiyangzhou01/Liquid/blob/main/README.md) • [中文](https://github.com/ruiyangzhou01/Liquid/blob/main/README_zh.md) • [Deutsch](https://github.com/ruiyangzhou01/Liquid/blob/main/README_de.md) • [Español](https://github.com/ruiyangzhou01/Liquid/blob/main/README_es.md) • [Français](https://github.com/ruiyangzhou01/Liquid/blob/main/README_fr.md) • [日本語](https://github.com/ruiyangzhou01/Liquid/blob/main/README_ja.md)
 
-Liquid 是一个 Typora 主题，灵感来自 [Microsoft Fluent Design](https://www.microsoft.com/design/fluent/#/) 和 [Purple Theme](https://github.com/hliu202/typora-purple-theme)。它通过渐变、云母质感、圆角矩形和内置字体提供 Windows 11 风格的阅读与写作体验。主题包含四个基于模块化 CSS 的模式。
+Liquid 是一个受 [Microsoft Fluent Design](https://www.microsoft.com/design/fluent/#/) 与 [Purple Theme](https://github.com/hliu202/typora-purple-theme) 启发的 Typora 主题。当前仓库直接提供 `src/` 下可用的主题源码（不再有独立 `dist/` 构建产物）。
+
+## 当前状态
+
+- 持续维护，提供四个模式：`liquid`、`liquid-dark`、`liquid-ink`、`liquid-ink-dark`
+- 源码 CSS 与字体文件直接在仓库中维护
+- 文档与翻译已按当前仓库结构更新
 
 ## 特性
 
-- Fluent Design 风格：渐变、云母、圆角矩形和彩色指示
-- 四种模式：Light、Dark、Ink 和 Ink Dark
-- 定制的 CodeMirror 代码块样式
-- 内置衬线、手写和等宽字体
+- Fluent 风格视觉：渐变、圆角、强调色指示、类云母质感
+- Light / Dark / Ink / Ink Dark 四种模式
+- 定制 CodeMirror 代码块样式
+- 内置衬线、等宽和 Ink 手写风格字体
 
-## 兼容性
+## 仓库结构
 
-- Windows 10 和 Windows 11
-- Typora 桌面版
-- 语言覆盖：英文与中文（Source Han Serif CN）。Ink 模式还使用 Ink Free 与 FZSJ-SGLDXMHJW 作为手写字体。
-
-## 截图
-
-Liquid Theme 旨在为 Windows 11 中的 Typora 提供现代化视觉体验。它使用了现代 UI 元素，如渐变、云母材质和圆角矩形。主题支持中文和英文，并提供 Light Mode、Dark Mode、Ink Mode 和 Ink Dark Mode。
-
-![preview](/media/theme/liquid/preview.png)
-
-### Light Mode
-
-![light-preview1](/media/theme/liquid/light-preview1.png)
-
-![light-preview2](/media/theme/liquid/light-preview2.png)
-
-![light-preview3](/media/theme/liquid/light-preview3.png)
-
-### Dark Mode
-
-![dark-preview1](/media/theme/liquid/dark-preview1.png)
-
-![dark-preview2](/media/theme/liquid/dark-preview2.png)
-
-![dark-preview3](/media/theme/liquid/dark-preview3.png)
-
-### Ink Mode & Ink Dark Mode
-
-如果你使用像 Microsoft Surface 这样的二合一电脑来学习和写作，或者只是喜欢手写字体，那么 Ink Mode 可以在 Typora 中提供手写风格的阅读和书写体验。
-
-![ink-preview1](/media/theme/liquid/ink-preview1.png)
-
-![ink-preview2](/media/theme/liquid/ink-preview2.png)
-
-![ink-preview3](/media/theme/liquid/ink-preview3.png)
+```text
+src/
+  liquid.css
+  liquid-dark.css
+  liquid-ink.css
+  liquid-ink-dark.css
+  liquid/
+    *.css
+    *.ttf
+    *.woff2
+Demo.md
+README*.md
+doc/Document*.md
+media/
+assets/
+```
 
 ## 安装
 
-1. 从 [Releases](https://github.com/ruiyangzhou01/Liquid/releases) 页面下载 `liquid.zip`。
-2. 在 Typora 设置中，点击 **偏好设置**，选择 **界面**，然后点击 **打开主题文件夹**。
-3. 解压并复制 `liquid.css`、`liquid-dark.css`、`liquid-ink.css`、`liquid-ink-dark.css` 和 `liquid/` 字体文件夹到主题目录。
-4. 重启 Typora。
-5. 在 Typora 的 **主题** 菜单中选择 Liquid 主题。
-6. 打开本仓库中的 `Demo.md`（或源码压缩包）预览渲染效果。
-
-### Ink 模式字体
-
-Liquid 已通过 `@font-face` 打包 Ink 字体，通常不需要系统安装。在区分大小写的文件系统中，请确认 `liquid/` 目录的字体文件名与 CSS 引用一致（`inkfree.ttf` 与 `FZSJ-SGLDXMHJW.ttf`），必要时重命名或修改 CSS。`FZSJ-SGLDXMHJW` 用于 Ink 模式中文字符，`Inkfree` 用于拉丁字符的手写字体。
-
-## 从源码构建
-
-构建脚本使用 Windows 路径编写。
-
-1. 安装 Python 3。
-2. 运行 `cd src/Deploy`。
-3. 运行 `python CombineCSS.py`，将 `src/liquid*.css` 合并到 `dist/*.css`。
-4. （可选）运行 `cd ../deploy` 和 `python CompressZip.py`，将 `dist` 打包为 `liquid.zip`。
+1. 从 [Releases](https://github.com/ruiyangzhou01/Liquid/releases) 下载 `liquid.zip`，或直接克隆仓库。
+2. 打开 Typora → **偏好设置** → **外观** → **打开主题文件夹**。
+3. 将以下文件复制到 Typora 主题目录：
+   - `src/liquid.css`
+   - `src/liquid-dark.css`
+   - `src/liquid-ink.css`
+   - `src/liquid-ink-dark.css`
+   - `src/liquid/`（整个目录）
+4. 重启 Typora，在 **主题** 菜单中选择 Liquid 模式。
+5. 打开 `Demo.md` 预览效果。
 
 ## 自定义
 
-- 通过 Typora 自定义 CSS（推荐）：<https://support.typora.io/Add-Custom-CSS/>。
-- 编辑主题目录中的编译后文件（本仓库的 `dist/*.css`）。
-- 深度定制可编辑 `src/liquid/` 模块并重新构建，详情参见下方文档。
+- 快速调整：直接编辑主题目录中的 `liquid*.css`。
+- 深度定制：编辑 `src/liquid/` 模块（`main.css`、`color-*.css`、`font*.css`、`CodeMirror*.css`、`custom-*.css`）。
+- 通过 Typora 自定义 CSS 添加覆盖层：<https://support.typora.io/Add-Custom-CSS/>。
+
+## 故障排查
+
+- **Typora 中看不到主题**：确认四个 `liquid*.css` 已复制到主题目录根路径。
+- **字体或 Ink 效果缺失**：确认 `liquid/` 目录与 CSS 文件处于同级。
+- **区分大小写系统出现缺字**：检查字体文件名大小写与 CSS 引用一致（如 `Inkfree.ttf`、`FZSJ-SGLDXMHJW.TTF`）。
 
 ## 文档
 

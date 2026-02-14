@@ -28,80 +28,64 @@ typora-copy-images-to: ../../media/theme/Liquid
 
 [English](https://github.com/ruiyangzhou01/Liquid/blob/main/README.md) • [中文](https://github.com/ruiyangzhou01/Liquid/blob/main/README_zh.md) • [Deutsch](https://github.com/ruiyangzhou01/Liquid/blob/main/README_de.md) • [Español](https://github.com/ruiyangzhou01/Liquid/blob/main/README_es.md) • [Français](https://github.com/ruiyangzhou01/Liquid/blob/main/README_fr.md) • [日本語](https://github.com/ruiyangzhou01/Liquid/blob/main/README_ja.md)
 
-Liquid ist ein Typora-Theme, inspiriert von [Microsoft Fluent Design](https://www.microsoft.com/design/fluent/#/) und dem [Purple Theme](https://github.com/hliu202/typora-purple-theme). Es liefert ein Windows-11-ähnliches Lese- und Schreiberlebnis mit Farbverläufen, Mica-Flächen, abgerundeten Rechtecken und eingebetteten Schriftarten. Das Theme bietet vier Varianten auf Basis modularer CSS-Dateien.
+Liquid ist ein Typora-Theme, inspiriert von [Microsoft Fluent Design](https://www.microsoft.com/design/fluent/#/) und dem [Purple Theme](https://github.com/hliu202/typora-purple-theme). Dieses Repository enthält direkt nutzbare Theme-Dateien unter `src/` (kein separates `dist/`).
+
+## Aktueller Stand
+
+- Aktiv gepflegt, mit vier Varianten: `liquid`, `liquid-dark`, `liquid-ink`, `liquid-ink-dark`
+- Quell-CSS und Schriften liegen direkt im Repository
+- Dokumentation und Übersetzungen entsprechen der aktuellen Struktur
 
 ## Funktionen
 
-- Fluent-Design-Stil mit Farbverläufen, Mica, abgerundeten Rechtecken und farbigen Indikatoren
-- Vier Varianten: Light, Dark, Ink und Ink Dark
+- Fluent-ähnliches Design mit Verläufen, runden Ecken und Akzentflächen
+- Light / Dark / Ink / Ink Dark
 - Angepasste CodeMirror-Stile für Codeblöcke
-- Mitgelieferte Serif-, Handschrift- und Monospace-Schriften
+- Mitgelieferte Serif-, Monospace- und Ink-Schriften
 
-## Kompatibilität
+## Repository-Struktur
 
-- Windows 10 und Windows 11
-- Typora-Desktop-App
-- Sprachunterstützung: Englisch und Chinesisch (Source Han Serif CN). Ink-Modi verwenden zusätzlich Ink Free und FZSJ-SGLDXMHJW als Handschrift.
-
-## Screenshots
-
-Liquid Theme zielt darauf ab, Typora unter Windows 11 eine moderne Optik zu geben. Es verwendet UI-Elemente wie Farbverläufe, Mica-Material und abgerundete Rechtecke. Das Theme unterstützt Englisch und Chinesisch und bietet Light Mode, Dark Mode, Ink Mode und Ink Dark Mode.
-
-![preview](/media/theme/liquid/preview.png)
-
-### Light Mode
-
-![light-preview1](/media/theme/liquid/light-preview1.png)
-
-![light-preview2](/media/theme/liquid/light-preview2.png)
-
-![light-preview3](/media/theme/liquid/light-preview3.png)
-
-### Dark Mode
-
-![dark-preview1](/media/theme/liquid/dark-preview1.png)
-
-![dark-preview2](/media/theme/liquid/dark-preview2.png)
-
-![dark-preview3](/media/theme/liquid/dark-preview3.png)
-
-### Ink Mode & Ink Dark Mode
-
-Wenn du einen 2-in-1-PC wie Microsoft Surface zum Lernen oder Schreiben nutzt oder einfach handschriftliche Fonts bevorzugst, bietet Ink Mode in Typora ein handschriftliches Lese- und Schreiberlebnis.
-
-![ink-preview1](/media/theme/liquid/ink-preview1.png)
-
-![ink-preview2](/media/theme/liquid/ink-preview2.png)
-
-![ink-preview3](/media/theme/liquid/ink-preview3.png)
+```text
+src/
+  liquid.css
+  liquid-dark.css
+  liquid-ink.css
+  liquid-ink-dark.css
+  liquid/
+    *.css
+    *.ttf
+    *.woff2
+Demo.md
+README*.md
+doc/Document*.md
+media/
+assets/
+```
 
 ## Installation
 
-1. Lade `liquid.zip` von der Seite [Releases](https://github.com/ruiyangzhou01/Liquid/releases) herunter.
-2. Öffne in Typora **Preferences** → **Appearance** → **Open Theme Folder**.
-3. Entpacke und kopiere `liquid.css`, `liquid-dark.css`, `liquid-ink.css`, `liquid-ink-dark.css` sowie den Schriftordner `liquid/` in den Theme-Ordner.
-4. Starte Typora neu.
-5. Wähle das Liquid-Theme im **Themes**-Menü aus.
-6. Öffne `Demo.md` aus diesem Repository (oder dem Quellcode-Archiv), um die Darstellung zu prüfen.
-
-### Ink-Mode-Schriften
-
-Liquid bringt die Ink-Schriften mit und lädt sie über `@font-face`, daher ist eine systemweite Installation meist nicht nötig. Auf dateisensitiven Systemen müssen die Dateinamen im Ordner `liquid/` den CSS-Referenzen entsprechen (`inkfree.ttf` und `FZSJ-SGLDXMHJW.ttf`); benenne die Dateien um oder passe das CSS an, falls nötig. `FZSJ-SGLDXMHJW` rendert chinesische Zeichen im Ink-Modus, `Inkfree` liefert die Handschrift für lateinische Zeichen.
-
-## Aus dem Quellcode bauen
-
-Die Build-Skripte verwenden Windows-Pfade.
-
-1. Python 3 installieren.
-2. `cd src/Deploy` ausführen.
-3. `python CombineCSS.py` ausführen, um `src/liquid*.css` nach `dist/*.css` zu kombinieren.
-4. (Optional) `cd ../deploy` und `python CompressZip.py` ausführen, um `dist` als `liquid.zip` zu packen.
+1. `liquid.zip` von [Releases](https://github.com/ruiyangzhou01/Liquid/releases) laden oder Repository klonen.
+2. In Typora: **Preferences** → **Appearance** → **Open Theme Folder**.
+3. In den Theme-Ordner kopieren:
+   - `src/liquid.css`
+   - `src/liquid-dark.css`
+   - `src/liquid-ink.css`
+   - `src/liquid-ink-dark.css`
+   - `src/liquid/` (kompletter Ordner)
+4. Typora neu starten und ein Liquid-Theme auswählen.
+5. `Demo.md` zur Vorschau öffnen.
 
 ## Anpassung
 
-- Benutzerdefiniertes CSS in Typora hinzufügen (empfohlen): <https://support.typora.io/Add-Custom-CSS/>.
-- Die kompilierten Dateien im Theme-Ordner bearbeiten (`dist/*.css` in diesem Repository).
-- Für tiefergehende Änderungen die Module in `src/liquid/` anpassen und neu bauen. Siehe die Dokumentation unten.
+- Schnell anpassen: installierte `liquid*.css` direkt bearbeiten.
+- Tiefer anpassen: Module unter `src/liquid/` bearbeiten (`main.css`, `color-*.css`, `font*.css`, `CodeMirror*.css`, `custom-*.css`).
+- Eigene Overrides über Typora Custom CSS: <https://support.typora.io/Add-Custom-CSS/>.
+
+## Fehlerbehebung
+
+- **Theme erscheint nicht**: prüfen, ob alle vier `liquid*.css` im Theme-Ordner liegen.
+- **Ink/Schrift fehlt**: prüfen, ob `liquid/` neben den CSS-Dateien liegt.
+- **Dateisensitive Systeme**: Dateinamen exakt wie in CSS referenziert verwenden (`Inkfree.ttf`, `FZSJ-SGLDXMHJW.TTF`).
 
 ## Dokumentation
 
